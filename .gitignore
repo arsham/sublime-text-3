@@ -1,17 +1,9 @@
-Cache
-Index
-Installed Packages
-Local
-Packages
-!Packages/User/Package\ Control.sublime-settings
-!Packages/User/Anaconda.sublime-settings
-!Packages/User/Default (Linux).sublime-keymap
-!Packages/User/Default (Linux).sublime-mousemap
-!Packages/User/golang.sublime-settings
-!Packages/User/GoTools.sublime-settings
-!Packages/User/Preferences.sublime-settings
-!Packages/User/python-env.sublime-build
-!Packages/User/python.sublime-build
-!Packages/User/Python.sublime-setting
-!Packages/User/Python.sublime-settings
-!Packages/User/trailing_spaces.sublime-settings
+*
+!Package Control.sublime-settings
+!Anaconda.sublime-settings
+!Default (Linux).sublime-keymap
+!Default (Linux).sublime-mousemap
+!golang.sublime-settings
+!GoTools.sublime-settings
+!Preferences.sublime-settings
+!trailing_spaces.sublime-settings
