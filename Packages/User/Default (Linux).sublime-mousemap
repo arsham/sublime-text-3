@@ -1,0 +1,71 @@
+[
+    {
+        "button": "button2",
+        "modifiers": ["alt"],
+        "command": "anaconda_goto",
+        "press_command": "drag_select",
+        "context": [
+            {
+                "key": "selector",
+                "operator": "equal",
+                "operand": "source.Python (Django),source.py,source.python",
+                "match_all": true,
+            }
+        ]
+    },
+    //Gotools:
+    {
+        "button": "button2",
+        "modifiers": ["ctrl"],
+        "command": "gotools_goto_def",
+        "press_command": "drag_select",
+        "context": [
+            {
+                "key": "selector",
+                "operator": "not_equal",
+                "operand": "source.go",
+                "match_all": true,
+            }
+        ]
+    },
+    //gosublime
+    // {
+    //     "button": "button2",
+    //     "modifiers": ["alt"],
+    //     "press_command": "drag_select",
+    //     "command": "gs_on_left_click",
+    //     "context": [
+    //         {
+    //             "key": "selector",
+    //             "operator": "equal",
+    //             "operand": "source.go"
+    //         }
+    //     ]
+    // },
+    // {
+    //     "button": "button2",
+    //     "modifiers": ["ctrl", "shift"],
+    //     "press_command": "drag_select",
+    //     "command": "gs_on_right_click",
+    //     "context": [
+    //         {
+    //             "key": "selector",
+    //             "operator": "equal",
+    //             "operand": "source.go"
+    //         }
+    //     ]
+    // },
+    // {
+    //     "button": "button2",
+    //     "modifiers": ["alt"],
+    //     "command": "gs_doc",
+    //     "args": {"mode": "goto"},
+    //     "context": [
+    //         {
+    //             "key": "selector",
+    //             "operator": "equal",
+    //             "operand": "source.go"
+    //         }
+    //     ]
+    // }
+]

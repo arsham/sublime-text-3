@@ -1,0 +1,42 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Alignment",
+		"Anaconda",
+		"ApplySyntax",
+		"BracketHighlighter",
+		"Case Conversion",
+		"Codec",
+		"ColorSchemeSelector",
+		"Colorsublime",
+		"DataConverter",
+		"Djaneiro",
+		"Django Lookup Snippets",
+		"Dockerfile Syntax Highlighting",
+		"Dotfiles Syntax Highlighting",
+		"File Rename",
+		"Generate Password",
+		"GitGutter",
+		"Golang Tools Integration",
+		"HaoGist",
+		"Javascript Beautify",
+		"Jump Along Indent",
+		"LoremIpsum",
+		"Material Theme",
+		"MoveTab",
+		"Package Control",
+		"Phix Color Scheme",
+		"PlainTasks",
+		"Pretty JSON",
+		"Random Everything",
+		"SideBarEnhancements",
+		"SqlBeautifier",
+		"TrailingSpaces",
+		"Unicode Character Highlighter",
+		"URLEncode"
+	]
+}
