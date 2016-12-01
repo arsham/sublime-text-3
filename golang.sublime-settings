@@ -5,4 +5,5 @@
     "lint_on_save": true,
     "autocomplete": true,
     "format_backend": "both",
+    "auto_complete_triggers": [{"selector": "source.go - string - comment - constant.numeric", "characters": "."}],
 }

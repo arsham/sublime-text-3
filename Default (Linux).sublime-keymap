@@ -16,5 +16,5 @@
     { "keys": ["ctrl+f11"], "command": "previous_font" },
     { "keys": ["ctrl+f12"], "command": "next_font" },
     { "keys": ["super+g"], "command": "gotools_guru" },
-    {"keys": ["ctrl+space"], "command": "auto_complete"},
+    { "keys": ["ctrl+space"], "command": "auto_complete"},
 ]

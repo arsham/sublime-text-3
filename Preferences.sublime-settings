@@ -41,7 +41,7 @@
 		"gray_antialias",
 		"directwrite"
 	],
-	"font_size": 10,
+	"font_size": 11,
 	"highlight_line": true,
 	"highlight_modified_tabs": false,
 	"ignored_packages":
@@ -56,16 +56,30 @@
 		"CSS",
 		"D",
 		"Erlang",
+		"Graphviz",
 		"Groovy",
 		"Haskell",
 		"Java",
+		"Javascript Beautify",
 		"LaTeX",
 		"Lisp",
 		"Lua",
+		"Makefile",
+		"Markdown",
 		"Matlab",
 		"Objective-C",
 		"OCaml",
-		"Vintage"
+		"Pascal",
+		"Perl",
+		"PHP",
+		"R",
+		"Rails",
+		"Ruby",
+		"Rust",
+		"TCL",
+		"Textile",
+		"Vintage",
+		"XML"
 	],
 	"indent_guide_options":
 	[
