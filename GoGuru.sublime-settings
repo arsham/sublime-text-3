@@ -1,0 +1,6 @@
+{
+    "goguru_env": {
+        "GOPATH": "/home/arsham/Projects/Go:/usr/bin/go",
+        "PATH": "/home/arsham/Projects/Go/bin:$PATH:/usr/bin",
+    },
+}
