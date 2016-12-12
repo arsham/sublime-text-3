@@ -2,8 +2,8 @@
     "GOPATH": "/home/arsham/Projects/Go:/usr/bin/go",
     "PATH": "/home/arsham/Projects/Go/bin:$PATH:/usr/bin",
     // "lint_backend": "both",
-    "lint_on_save": false,
-    "autocomplete": false,
+    "lint_on_save": true,
+    "autocomplete": true,
 
     "format_backend": "both",
     "auto_complete_triggers": [{"selector": "source.go - string - comment - constant.numeric", "characters": "."}],
