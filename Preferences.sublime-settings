@@ -65,7 +65,6 @@
 		"Lisp",
 		"Lua",
 		"Makefile",
-		"Markdown",
 		"Matlab",
 		"Objective-C",
 		"OCaml",
@@ -78,8 +77,7 @@
 		"Rust",
 		"TCL",
 		"Textile",
-		"Vintage",
-		"XML"
+		"Vintage"
 	],
 	"indent_guide_options":
 	[

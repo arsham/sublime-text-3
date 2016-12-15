@@ -1,0 +1,11 @@
+<snippet>
+    <content><![CDATA[
+// Copyright 2016 Arsham Shirvani <arshamshirvani@gmail.com>. All rights reserved.
+// Use of this source code is governed by the Apache 2.0 license
+// License that can be found in the LICENSE file.
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <!-- <tabTrigger>hello</tabTrigger> -->
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <!-- <scope>source.python</scope> -->
+</snippet>
