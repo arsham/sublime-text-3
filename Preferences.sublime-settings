@@ -1,4 +1,16 @@
 {
+	"added_words":
+	[
+		"Arsham",
+		"Shirvani",
+		"arshamshirvani",
+		"gmail",
+		"src",
+		"Timeout",
+		"ctrl",
+		"alt",
+		"args"
+	],
 	"auto_complete_commit_on_tab": false,
 	"auto_complete_selector": "source, text",
 	"bold_folder_labels": true,
@@ -11,6 +23,7 @@
 	"color_scheme": "Packages/Phix Color Scheme/Phix Dark.tmTheme",
 	"default_line_ending": "unix",
 	"detect_slow_plugins": false,
+	"dictionary": "Packages/Language - English/en_GB.dic",
 	"enable_tab_scrolling": false,
 	"ensure_newline_at_eof_on_save": true,
 	"fade_fold_buttons": false,
@@ -58,6 +71,7 @@
 		"Erlang",
 		"Graphviz",
 		"Groovy",
+		"HaoGist",
 		"Haskell",
 		"Java",
 		"Javascript Beautify",
@@ -79,6 +93,24 @@
 		"Textile",
 		"Vintage"
 	],
+	"ignored_words":
+	[
+		"Expvar",
+		"Sirupsen",
+		"arsham",
+		"com",
+		"datatype",
+		"expvar",
+		"expvastic",
+		"fmt",
+		"github",
+		"godef",
+		"goroutine",
+		"httptest",
+		"io",
+		"logrus",
+		"resp"
+	],
 	"indent_guide_options":
 	[
 		"draw_active"
@@ -99,6 +131,7 @@
 	"show_tab_close_buttons": true,
 	"soda_classic_tabs": true,
 	"soda_folder_icons": true,
+	"spell_check": true,
 	"tab_size": 4,
 	"theme": "Material-Theme-Darker.sublime-theme",
 	"translate_tabs_to_spaces": true,
