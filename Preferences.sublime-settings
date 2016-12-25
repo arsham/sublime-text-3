@@ -12,7 +12,8 @@
 		"args",
 		"golang",
 		"refactor",
-		"Printf"
+		"Printf",
+		"elasticsearch"
 	],
 	"auto_complete_commit_on_tab": false,
 	"auto_complete_selector": "source, text",
@@ -98,10 +99,12 @@
 	],
 	"ignored_words":
 	[
+		"Config",
 		"Expvar",
 		"Sirupsen",
 		"Warnf",
 		"arsham",
+		"backoff",
 		"com",
 		"config",
 		"ctx",
@@ -117,8 +120,11 @@
 		"io",
 		"keymap",
 		"logrus",
+		"mapstructure",
 		"mousemap",
+		"olivere",
 		"resp",
+		"spf13",
 		"timeout",
 		"var"
 	],
