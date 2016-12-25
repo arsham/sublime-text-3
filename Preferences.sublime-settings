@@ -9,7 +9,8 @@
 		"Timeout",
 		"ctrl",
 		"alt",
-		"args"
+		"args",
+		"golang"
 	],
 	"auto_complete_commit_on_tab": false,
 	"auto_complete_selector": "source, text",
@@ -27,6 +28,7 @@
 	"enable_tab_scrolling": false,
 	"ensure_newline_at_eof_on_save": true,
 	"fade_fold_buttons": false,
+	"origami_auto_close_empty_panes": true,
 	"file_exclude_patterns":
 	[
 		"*.sqlite3",
@@ -99,17 +101,23 @@
 		"Sirupsen",
 		"arsham",
 		"com",
+		"config",
+		"ctx",
 		"datatype",
 		"expvar",
 		"expvastic",
 		"fmt",
+		"func",
 		"github",
 		"godef",
 		"goroutine",
 		"httptest",
 		"io",
+		"keymap",
 		"logrus",
-		"resp"
+		"mousemap",
+		"resp",
+		"timeout"
 	],
 	"indent_guide_options":
 	[

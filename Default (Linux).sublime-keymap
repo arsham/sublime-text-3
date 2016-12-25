@@ -4,18 +4,47 @@
     { "keys": ["ctrl+down"], "command": "scroll_lines", "args": {"amount": -1.0 } },
     { "keys": ["alt+left"], "command": "jump_back"},
     { "keys": ["alt+right"], "command": "jump_forward"},
-    { "keys": ["ctrl+super+down"], "command": "goto_definition" },
     { "keys": ["ctrl+0"], "command": "reset_font_size" },
-    { "keys": ["ctrl+alt+super+up"], "command": "new_pane" },
-    { "keys": ["ctrl+alt+super+down"], "command": "close_pane" },
-    { "keys": ["ctrl+alt+super+left"], "command": "focus_neighboring_group", "args": {"forward": false} },
-    { "keys": ["ctrl+alt+super+right"], "command": "focus_neighboring_group" },
-    { "keys": ["ctrl+alt+super+shift+left"], "command": "move_to_neighboring_group", "args": {"forward": false} },
-    { "keys": ["ctrl+alt+super+shift+right"], "command": "move_to_neighboring_group" },
     { "keys": ["super+.", "super+g"], "command": "godef" },
-    { "keys": ["ctrl+f11"], "command": "previous_font" },
-    { "keys": ["ctrl+f12"], "command": "next_font" },
-    { "keys": ["super+g"], "command": "gotools_guru" },
+    // { "keys": ["super+g"], "command": "gotools_guru" },
     { "keys": ["ctrl+space"], "command": "auto_complete"},
     { "keys": ["ctrl+shift+space"], "command": "expand_selection", "args": {"to": "indentation"} },
+
+    // Origami
+    { "keys": ["ctrl+b", "ctrl+up"], "command": "create_pane", "args": {"direction": "up"} },
+    { "keys": ["ctrl+b", "ctrl+right"], "command": "create_pane", "args": {"direction": "right"} },
+    { "keys": ["ctrl+b", "ctrl+down"], "command": "create_pane", "args": {"direction": "down"} },
+    { "keys": ["ctrl+b", "ctrl+left"], "command": "create_pane", "args": {"direction": "left"} },
+
+    { "keys": ["ctrl+b", "ctrl+shift+up"], "command": "destroy_pane", "args": {"direction": "up"} },
+    { "keys": ["ctrl+b", "ctrl+shift+right"], "command": "destroy_pane", "args": {"direction": "right"} },
+    { "keys": ["ctrl+b", "ctrl+shift+down"], "command": "destroy_pane", "args": {"direction": "down"} },
+    { "keys": ["ctrl+b", "ctrl+shift+left"], "command": "destroy_pane", "args": {"direction": "left"} },
+
+    { "keys": ["ctrl+b", "up"], "command": "travel_to_pane", "args": {"direction": "up"} },
+    { "keys": ["ctrl+b", "right"], "command": "travel_to_pane", "args": {"direction": "right"} },
+    { "keys": ["ctrl+b", "down"], "command": "travel_to_pane", "args": {"direction": "down"} },
+    { "keys": ["ctrl+b", "left"], "command": "travel_to_pane", "args": {"direction": "left"} },
+
+    { "keys": ["ctrl+b", "shift+up"], "command": "carry_file_to_pane", "args": {"direction": "up"} },
+    { "keys": ["ctrl+b", "shift+right"], "command": "carry_file_to_pane", "args": {"direction": "right"} },
+    { "keys": ["ctrl+b", "shift+down"], "command": "carry_file_to_pane", "args": {"direction": "down"} },
+    { "keys": ["ctrl+b", "shift+left"], "command": "carry_file_to_pane", "args": {"direction": "left"} },
+
+    { "keys": ["ctrl+b", "alt+up"], "command": "clone_file_to_pane", "args": {"direction": "up"} },
+    { "keys": ["ctrl+b", "alt+right"], "command": "clone_file_to_pane", "args": {"direction": "right"} },
+    { "keys": ["ctrl+b", "alt+down"], "command": "clone_file_to_pane", "args": {"direction": "down"} },
+    { "keys": ["ctrl+b", "alt+left"], "command": "clone_file_to_pane", "args": {"direction": "left"} },
+
+    { "keys": ["ctrl+b", "ctrl+alt+up"], "command": "create_pane_with_file", "args": {"direction": "up"} },
+    { "keys": ["ctrl+b", "ctrl+alt+right"], "command": "create_pane_with_file", "args": {"direction": "right"} },
+    { "keys": ["ctrl+b", "ctrl+alt+down"], "command": "create_pane_with_file", "args": {"direction": "down"} },
+    { "keys": ["ctrl+b", "ctrl+alt+left"], "command": "create_pane_with_file", "args": {"direction": "left"} },
+
+
+    { "keys": ["ctrl+b", "ctrl+z"], "command": "zoom_pane", "args": {"fraction": 0.9} },
+    { "keys": ["ctrl+b", "ctrl+shift+z"], "command": "unzoom_pane", "args": {} },
+
+    { "keys": ["ctrl+b", "ctrl+c"], "command": "resize_pane", "args": {"orientation": "cols"} },
+    { "keys": ["ctrl+b", "ctrl+r"], "command": "resize_pane", "args": {"orientation": "rows"} },
 ]
