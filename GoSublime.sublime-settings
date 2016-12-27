@@ -8,11 +8,12 @@
     "fmt_cmd": ["goimports"],
     "on_save": [
         {"cmd": "gs_comp_lint"},
-        // {"cmd": ["go", "install"]},
     ],
     "comp_lint_commands": [
-        {"cmd": ["golint *.go"], "shell": true},
+        {"cmd": ["gofmt", "-s"]},
+        {"cmd": ["golint ,*.go"], "shell": true},
         {"cmd": ["go", "vet"]},
         {"cmd": ["go", "install"]},
+        {"cmd": ["gocyclo", "-over", "14", "*.go" ], "shell": true},
     ],
 }

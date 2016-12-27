@@ -14,20 +14,30 @@
         ]
     },
     //Gotools:
-    {
-        "button": "button2",
-        "modifiers": ["ctrl"],
-        "command": "gotools_goto_def",
-        "press_command": "drag_select",
-        "context": [
-            {
-                "key": "selector",
-                "operator": "not_equal",
-                "operand": "source.go",
-                "match_all": true,
-            }
-        ]
-    },
+    // {
+    //     "button": "button2",
+    //     "modifiers": ["ctrl"],
+    //     "command": "gotools_goto_def",
+    //     "press_command": "drag_select",
+    //     "context": [
+    //         {
+    //             "key": "selector",
+    //             "operator": "not_equal",
+    //             "operand": "source.go",
+    //             "match_all": true,
+    //         }
+    //     ]
+    // },
+    // {
+    //     "button": "button2",
+    //     "modifiers": ["ctrl"],
+    //     "command": "go_guru",
+    //     "press_command": "drag_select",
+    //     "args": {
+    //         "mode": "definition",
+    //         "output": false
+    //     },
+    // },
     //gosublime
     // {
     //     "button": "button2",

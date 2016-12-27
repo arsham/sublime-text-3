@@ -1,6 +1,6 @@
 {
     "goguru_debug": false,
-    "goguru_jumpto_definition": true,
+    "goguru_jumpto_definition": false,
     "goguru_env":
     {
         "GOPATH": "/home/arsham/Projects/Go:/usr/bin/go",
