@@ -77,7 +77,6 @@
 		"Erlang",
 		"Graphviz",
 		"Groovy",
-		"HaoGist",
 		"Haskell",
 		"Java",
 		"Javascript Beautify",
@@ -95,6 +94,7 @@
 		"Rails",
 		"Ruby",
 		"Rust",
+		"Scala",
 		"TCL",
 		"Textile",
 		"Vintage"
