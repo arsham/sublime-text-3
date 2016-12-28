@@ -9,6 +9,8 @@
     // { "keys": ["super+g"], "command": "gotools_guru" },
     { "keys": ["ctrl+space"], "command": "auto_complete"},
     { "keys": ["ctrl+shift+space"], "command": "expand_selection", "args": {"to": "indentation"} },
+    { "keys": ["ctrl+.", "ctrl+g"], "command": "go_guru_goto_definition", "args": {"output": false}, "context": [{ "key": "selector", "operator": "equal", "operand": "source.go" }] },
+
     // {"keys": ["ctrl+.", "ctrl+g"], "command": "gotools_goto_def", "context": [{ "key": "selector", "operator": "equal", "operand": "source.go" }] },
 
     // Origami
