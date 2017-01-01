@@ -6,7 +6,6 @@
     { "keys": ["alt+right"], "command": "jump_forward"},
     { "keys": ["ctrl+0"], "command": "reset_font_size" },
     { "keys": ["super+.", "super+g"], "command": "godef" },
-    // { "keys": ["super+g"], "command": "gotools_guru" },
     { "keys": ["ctrl+space"], "command": "auto_complete"},
     { "keys": ["ctrl+shift+space"], "command": "expand_selection", "args": {"to": "indentation"} },
     { "keys": ["ctrl+.", "ctrl+g"], "command": "go_guru_goto_definition", "args": {"output": false}, "context": [{ "key": "selector", "operator": "equal", "operand": "source.go" }] },
