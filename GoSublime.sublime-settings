@@ -7,13 +7,12 @@
     "comp_lint_enabled": true,
     "fmt_cmd": ["gofmt", "-s"],
     "on_save": [
-        {"cmd": "go install"},
         {"cmd": "gs_comp_lint"},
+        {"cmd": "go install"},
     ],
     "comp_lint_commands": [
         {"cmd": ["goimports -w $_fn"] , "shell": true},
         {"cmd": ["golint $_fn"], "shell": true},
         {"cmd": ["go", "vet"]},
-        {"cmd": ["gocyclo", "-over", "14", "$_fn" ], "shell": true},
     ],
 }
