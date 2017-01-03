@@ -11,4 +11,5 @@
 !GoGuru.sublime-settings
 !license.sublime-snippet
 !GoRename.sublime-settings
-!pallet.sublime-commands
+!arsham.sublime-commands
+!fold_comments.py

@@ -20,4 +20,6 @@
     {"caption": "Fold 8", "command": "fold_by_level", "args": {"level": 8}},
     {"caption": "Fold Nine", "command": "fold_by_level", "args": {"level": 9}},
     {"caption": "Fold 9", "command": "fold_by_level", "args": {"level": 9}},
+    {"caption": "Fold Comments", "command": "fold_comments"},
+    {"caption": "Unfold Comments", "command": "unfold_comments"},
 ]
