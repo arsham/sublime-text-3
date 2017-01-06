@@ -166,7 +166,7 @@
 	"material_theme_tabs_autowidth": true,
 	"origami_auto_close_empty_panes": true,
 	"save_on_focus_lost": false,
-	"shift_tab_unindent": true,
+	"shift_tab_unindent": false,
 	"show_encoding": true,
 	"show_line_endings": true,
 	"show_tab_close_buttons": true,
