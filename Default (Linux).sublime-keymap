@@ -6,6 +6,7 @@
     { "keys": ["super+.", "super+g"], "command": "godef" },
     { "keys": ["ctrl+space"], "command": "auto_complete"},
     { "keys": ["ctrl+.", "ctrl+g"], "command": "go_guru_goto_definition", "args": {"output": false}, "context": [{ "key": "selector", "operator": "equal", "operand": "source.go" }] },
+    { "keys": ["alt+d"], "command": "selection_fields" },
 
     // Origami and to support origami
     { "keys": ["ctrl+a", "ctrl+a"], "command": "select_all" },
