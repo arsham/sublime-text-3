@@ -1,20 +1,14 @@
 [
     { "keys": ["super+a"], "command": "alignment" },
-    { "keys": ["ctrl+up"], "command": "scroll_lines", "args": {"amount": 1.0 } },
-    { "keys": ["ctrl+down"], "command": "scroll_lines", "args": {"amount": -1.0 } },
     { "keys": ["alt+left"], "command": "jump_back"},
     { "keys": ["alt+right"], "command": "jump_forward"},
     { "keys": ["ctrl+0"], "command": "reset_font_size" },
     { "keys": ["super+.", "super+g"], "command": "godef" },
     { "keys": ["ctrl+space"], "command": "auto_complete"},
-    { "keys": ["ctrl+shift+space"], "command": "expand_selection", "args": {"to": "indentation"} },
     { "keys": ["ctrl+.", "ctrl+g"], "command": "go_guru_goto_definition", "args": {"output": false}, "context": [{ "key": "selector", "operator": "equal", "operand": "source.go" }] },
-
-    // {"keys": ["ctrl+.", "ctrl+g"], "command": "gotools_goto_def", "context": [{ "key": "selector", "operator": "equal", "operand": "source.go" }] },
 
     // Origami and to support origami
     { "keys": ["ctrl+a", "ctrl+a"], "command": "select_all" },
-    { "keys": ["ctrl+k", "ctrl+q"], "command": "build" },
     { "keys": ["ctrl+a", "ctrl+up"], "command": "create_pane", "args": {"direction": "up"} },
     { "keys": ["ctrl+a", "ctrl+right"], "command": "create_pane", "args": {"direction": "right"} },
     { "keys": ["ctrl+a", "ctrl+down"], "command": "create_pane", "args": {"direction": "down"} },
