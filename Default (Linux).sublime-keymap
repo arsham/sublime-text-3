@@ -8,6 +8,12 @@
     { "keys": ["ctrl+.", "ctrl+g"], "command": "go_guru_goto_definition", "args": {"output": false}, "context": [{ "key": "selector", "operator": "equal", "operand": "source.go" }] },
     { "keys": ["alt+d"], "command": "selection_fields" },
     { "keys": ["shift+insert"], "command": "paste", "args": {"clipboard": "selection"} },
+    { "keys": ["ctrl+alt+z"], "command": "strip_selection" },
+    { "keys": ["ctrl+alt+v"], "command": "paste_from_history" },
+    // jump and remove current selection in selection_fields
+    { "keys": ["ctrl+alt+x"], "command": "selection_fields", "args": {"mode": "smart", "only_other": true} },
+    // add the current selections as a fields
+    { "keys": ["alt+a"], "command": "selection_fields", "args": {"mode": "add"} },
 
     // Origami and to support origami
     { "keys": ["ctrl+a", "ctrl+a"], "command": "select_all" },
@@ -36,10 +42,10 @@
     { "keys": ["ctrl+a", "alt+down"], "command": "clone_file_to_pane", "args": {"direction": "down"} },
     { "keys": ["ctrl+a", "alt+left"], "command": "clone_file_to_pane", "args": {"direction": "left"} },
 
-    { "keys": ["ctrl+a", "ctrl+alt+up"], "command": "create_pane_with_file", "args": {"direction": "up"} },
-    { "keys": ["ctrl+a", "ctrl+alt+right"], "command": "create_pane_with_file", "args": {"direction": "right"} },
-    { "keys": ["ctrl+a", "ctrl+alt+down"], "command": "create_pane_with_file", "args": {"direction": "down"} },
-    { "keys": ["ctrl+a", "ctrl+alt+left"], "command": "create_pane_with_file", "args": {"direction": "left"} },
+    { "keys": ["ctrl+a", "ctrl+shift+alt+up"], "command": "create_pane_with_file", "args": {"direction": "up"} },
+    { "keys": ["ctrl+a", "ctrl+shift+alt+right"], "command": "create_pane_with_file", "args": {"direction": "right"} },
+    { "keys": ["ctrl+a", "ctrl+shift+alt+down"], "command": "create_pane_with_file", "args": {"direction": "down"} },
+    { "keys": ["ctrl+a", "ctrl+shift+alt+left"], "command": "create_pane_with_file", "args": {"direction": "left"} },
 
 
     { "keys": ["ctrl+a", "ctrl+z"], "command": "zoom_pane", "args": {"fraction": 0.9} },

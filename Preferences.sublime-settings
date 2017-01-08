@@ -160,6 +160,8 @@
 	"margin": 0,
 	"match_brackets_angle": true,
 	"material_theme_accent_orange": true,
+	"material_theme_accent_scrollbars": true,
+	"material_theme_big_fileicons": true,
 	"material_theme_contrast_mode": true,
 	"material_theme_small_statusbar": true,
 	"material_theme_small_tab": true,
