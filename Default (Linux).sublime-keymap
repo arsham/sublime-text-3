@@ -1,12 +1,13 @@
 [
     { "keys": ["super+a"], "command": "alignment" },
-    { "keys": ["alt+left"], "command": "jump_back"},
-    { "keys": ["alt+right"], "command": "jump_forward"},
+    // { "keys": ["alt+left"], "command": "jump_back"},
+    // { "keys": ["alt+right"], "command": "jump_forward"},
     { "keys": ["ctrl+0"], "command": "reset_font_size" },
     { "keys": ["super+.", "super+g"], "command": "godef" },
     { "keys": ["ctrl+space"], "command": "auto_complete"},
     { "keys": ["ctrl+.", "ctrl+g"], "command": "go_guru_goto_definition", "args": {"output": false}, "context": [{ "key": "selector", "operator": "equal", "operand": "source.go" }] },
     { "keys": ["alt+d"], "command": "selection_fields" },
+    { "keys": ["shift+insert"], "command": "paste", "args": {"clipboard": "selection"} },
 
     // Origami and to support origami
     { "keys": ["ctrl+a", "ctrl+a"], "command": "select_all" },
