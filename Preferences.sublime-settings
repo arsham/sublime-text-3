@@ -30,6 +30,7 @@
 	"default_line_ending": "unix",
 	"detect_slow_plugins": false,
 	"dictionary": "Packages/Language - English/en_GB.dic",
+	"draw_shadows": true,
 	"enable_tab_scrolling": false,
 	"ensure_newline_at_eof_on_save": true,
 	"fade_fold_buttons": false,
