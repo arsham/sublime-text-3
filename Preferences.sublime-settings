@@ -53,14 +53,35 @@
 		"build",
 		"site"
 	],
-	"font_face": "Inconsolata-g for Powerline",
+	"font_face": "Ubuntu Mono",
 	"font_options":
 	[
 		"subpixel_antialias",
 		"gray_antialias",
 		"directwrite"
 	],
-	"font_size": 11,
+	"font_size": 13,
+	"fonts_list":
+	[
+		{
+			"font_face": "Inconsolata-g for Powerline",
+			"font_size": 11,
+			"line_padding_bottom": 0,
+			"line_padding_top": 0
+		},
+		{
+			"font_face": "Ubuntu Mono",
+			"font_size": 13,
+			"line_padding_bottom": 1,
+			"line_padding_top": 1
+		},
+		{
+			"font_face": "Source Code Pro",
+			"font_size": 11,
+			"line_padding_bottom": -1,
+			"line_padding_top": 0
+		}
+	],
 	"highlight_line": true,
 	"highlight_modified_tabs": false,
 	"ignored_packages":
@@ -167,7 +188,11 @@
 	"material_theme_small_tab": true,
 	"material_theme_tabs_autowidth": true,
 	"origami_auto_close_empty_panes": true,
-	"rulers": [80,120],
+	"rulers":
+	[
+		80,
+		120
+	],
 	"save_on_focus_lost": false,
 	"shift_tab_unindent": false,
 	"show_encoding": true,

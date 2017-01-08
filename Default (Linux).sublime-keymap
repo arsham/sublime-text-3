@@ -1,5 +1,7 @@
 [
     { "keys": ["super+a"], "command": "alignment" },
+    { "keys": ["ctrl+shift+8"], "command": "previous_font" },
+    { "keys": ["ctrl+shift+9"], "command": "next_font" },
     // { "keys": ["alt+left"], "command": "jump_back"},
     // { "keys": ["alt+right"], "command": "jump_forward"},
     { "keys": ["ctrl+0"], "command": "reset_font_size" },
