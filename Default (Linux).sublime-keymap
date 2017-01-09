@@ -1,21 +1,23 @@
 [
     { "keys": ["super+a"], "command": "alignment" },
-    { "keys": ["ctrl+shift+8"], "command": "previous_font" },
-    { "keys": ["ctrl+shift+9"], "command": "next_font" },
-    // { "keys": ["alt+left"], "command": "jump_back"},
-    // { "keys": ["alt+right"], "command": "jump_forward"},
-    { "keys": ["ctrl+0"], "command": "reset_font_size" },
-    { "keys": ["super+.", "super+g"], "command": "godef" },
+
+    // { "keys": ["super+.", "super+g"], "command": "godef" },
     { "keys": ["ctrl+space"], "command": "auto_complete"},
     { "keys": ["ctrl+.", "ctrl+g"], "command": "go_guru_goto_definition", "args": {"output": false}, "context": [{ "key": "selector", "operator": "equal", "operand": "source.go" }] },
-    { "keys": ["alt+d"], "command": "selection_fields" },
+
     { "keys": ["shift+insert"], "command": "paste", "args": {"clipboard": "selection"} },
-    { "keys": ["ctrl+alt+z"], "command": "strip_selection" },
     { "keys": ["ctrl+alt+v"], "command": "paste_from_history" },
+
+    { "keys": ["alt+d"], "command": "selection_fields" },
+    { "keys": ["ctrl+alt+z"], "command": "strip_selection" },
     // jump and remove current selection in selection_fields
     { "keys": ["ctrl+alt+x"], "command": "selection_fields", "args": {"mode": "smart", "only_other": true} },
     // add the current selections as a fields
     { "keys": ["alt+a"], "command": "selection_fields", "args": {"mode": "add"} },
+
+    { "keys": ["ctrl+shift+8"], "command": "previous_font" },
+    { "keys": ["ctrl+shift+9"], "command": "next_font" },
+    { "keys": ["ctrl+0"], "command": "reset_font_size" },
 
     // Origami and to support origami
     { "keys": ["ctrl+a", "ctrl+a"], "command": "select_all" },
