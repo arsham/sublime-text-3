@@ -1,5 +1,6 @@
 [
     { "keys": ["super+a"], "command": "alignment" },
+    { "keys": ["ctrl+alt+d"], "command": "selection_fields", "args": {"mode": "smart"} },
 
     // { "keys": ["super+.", "super+g"], "command": "godef" },
     { "keys": ["ctrl+space"], "command": "auto_complete"},

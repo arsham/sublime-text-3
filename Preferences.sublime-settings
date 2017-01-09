@@ -54,20 +54,32 @@
 		"build",
 		"site"
 	],
-	"font_face": "Ubuntu Mono",
+	"font_face": "Monaco",
 	"font_options":
 	[
 		"subpixel_antialias",
 		"gray_antialias",
 		"directwrite"
 	],
-	"font_size": 13,
+	"font_size": 12,
 	"fonts_list":
 	[
 		{
 			"font_face": "Inconsolata-g for Powerline",
-			"font_size": 11,
+			"font_size": 12,
 			"line_padding_bottom": 0,
+			"line_padding_top": 0
+		},
+		{
+			"font_face": "Monaco for Powerline",
+			"font_size": 12,
+			"line_padding_bottom": 0,
+			"line_padding_top": 0
+		},
+		{
+			"font_face": "Monaco",
+			"font_size": 12,
+			"line_padding_bottom": -1,
 			"line_padding_top": 0
 		},
 		{
@@ -78,7 +90,25 @@
 		},
 		{
 			"font_face": "Source Code Pro",
-			"font_size": 11,
+			"font_size": 13,
+			"line_padding_bottom": -1,
+			"line_padding_top": 0
+		},
+		{
+			"font_face": "Consolas",
+			"font_size": 13,
+			"line_padding_bottom": -1,
+			"line_padding_top": 0
+		},
+		{
+			"font_face": "DroidSansMono",
+			"font_size": 13,
+			"line_padding_bottom": -1,
+			"line_padding_top": 0
+		},
+		{
+			"font_face": "DejaVuSansMono",
+			"font_size": 13,
 			"line_padding_bottom": -1,
 			"line_padding_top": 0
 		}
@@ -177,8 +207,8 @@
 	[
 		"draw_active"
 	],
-	"line_padding_bottom": 3,
-	"line_padding_top": 3,
+	"line_padding_bottom": -1,
+	"line_padding_top": 0,
 	"margin": 0,
 	"material_theme_accent_orange": true,
 	"material_theme_accent_scrollbars": true,
