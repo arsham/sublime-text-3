@@ -1,6 +1,8 @@
 [
     { "keys": ["super+a"], "command": "alignment" },
     { "keys": ["ctrl+alt+d"], "command": "selection_fields", "args": {"mode": "smart"} },
+    // jump and remove current selection in selection_fields
+    { "keys": ["ctrl+alt+x"], "command": "selection_fields", "args": {"mode": "smart", "only_other": true} },
 
     // { "keys": ["super+.", "super+g"], "command": "godef" },
     { "keys": ["ctrl+space"], "command": "auto_complete"},
