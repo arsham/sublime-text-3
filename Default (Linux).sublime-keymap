@@ -1,6 +1,7 @@
 [
     { "keys": ["super+a"], "command": "alignment" },
     { "keys": ["ctrl+alt+d"], "command": "selection_fields", "args": {"mode": "smart"} },
+    { "keys": ["ctrl+alt+f"], "command": "multi_find_all" },
     // jump and remove current selection in selection_fields
     { "keys": ["ctrl+alt+x"], "command": "selection_fields", "args": {"mode": "smart", "only_other": true} },
 

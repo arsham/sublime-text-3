@@ -1,4 +1,4 @@
-*
+/*
 !Package Control.sublime-settings
 !Anaconda.sublime-settings
 !Default (Linux).sublime-keymap
@@ -12,3 +12,4 @@
 !license.sublime-snippet
 !GoRename.sublime-settings
 !bh_core.sublime-settings
+!/Macros/
