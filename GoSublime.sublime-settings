@@ -14,5 +14,8 @@
         {"cmd": ["goimports -w $_fn"] , "shell": true},
         {"cmd": ["golint $_fn"], "shell": true},
         {"cmd": ["go", "vet"]},
+        {"cmd": ["goconst $_dir"], "shell": true},
+        {"cmd": ["usedexports $_dir"], "shell": true},
+        {"cmd": ["ineffassign $_fn"], "shell": true},
     ],
 }
