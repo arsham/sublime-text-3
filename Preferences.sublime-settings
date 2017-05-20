@@ -19,6 +19,22 @@
 	],
 	"auto_complete_commit_on_tab": false,
 	"auto_complete_selector": "source, text",
+	"binary_file_patterns":
+	[
+		"*.jpg",
+		"*.jpeg",
+		"*.png",
+		"*.gif",
+		"*.ttf",
+		"*.tga",
+		"*.dds",
+		"*.ico",
+		"*.eot",
+		"*.pdf",
+		"*.swf",
+		"*.jar",
+		"*.zip"
+	],
 	"bold_folder_labels": true,
 	"build_output_to_tab": true,
 	"caret_extra_bottom": 0,
@@ -40,7 +56,24 @@
 		"*.exe",
 		"*.pyc",
 		"*.pyo",
-		"*.dia"
+		"*.dia",
+		"*.dll",
+		"*.obj",
+		"*.o",
+		"*.a",
+		"*.lib",
+		"*.so",
+		"*.dylib",
+		"*.ncb",
+		"*.sdf",
+		"*.suo",
+		"*.pdb",
+		"*.idb",
+		".DS_Store",
+		"*.class",
+		"*.psd",
+		"*.db",
+		"*.sublime-workspace"
 	],
 	"folder_exclude_patterns":
 	[
@@ -208,7 +241,11 @@
 	[
 		"draw_active"
 	],
-	"line_padding_bottom": -1,
+	"index_exclude_patterns":
+	[
+		"*.log"
+	],
+	"line_padding_bottom": 0,
 	"line_padding_top": 0,
 	"margin": 0,
 	"material_theme_accent_orange": true,
