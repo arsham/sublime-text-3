@@ -57,4 +57,10 @@
 
     { "keys": ["ctrl+a", "ctrl+c"], "command": "resize_pane", "args": {"orientation": "cols"} },
     { "keys": ["ctrl+a", "ctrl+r"], "command": "resize_pane", "args": {"orientation": "rows"} },
+
+    // ctrl + < decrease width
+    { "keys": ["ctrl+,"], "command": "pane_pane_resize", "args": { "dimension": "width", "resize": "decrease" } },
+    // ctrl + > increase width
+    { "keys": ["ctrl+."], "command": "pane_pane_resize", "args": { "dimension": "width", "resize": "increase" } },
+
 ]

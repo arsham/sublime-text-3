@@ -15,7 +15,8 @@
 		"Printf",
 		"elasticsearch",
 		"yaml",
-		"niddle"
+		"niddle",
+		"redis"
 	],
 	"auto_complete_commit_on_tab": false,
 	"auto_complete_selector": "source, text",
@@ -233,6 +234,7 @@
 		"routepath",
 		"spf13",
 		"syscall",
+		"tcp",
 		"timeout",
 		"uuid",
 		"var"
