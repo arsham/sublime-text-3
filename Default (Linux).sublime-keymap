@@ -8,6 +8,8 @@
     // { "keys": ["super+.", "super+g"], "command": "godef" },
     { "keys": ["ctrl+space"], "command": "auto_complete"},
     { "keys": ["ctrl+.", "ctrl+g"], "command": "go_guru_goto_definition", "args": {"output": false}, "context": [{ "key": "selector", "operator": "equal", "operand": "source.go" }] },
+    { "keys": ["ctrl+.", "ctrl+g"], "command": "anaconda_goto", "context": [{"key": "selector", "operator": "equal", "operand": "source.python"}] },
+
 
     { "keys": ["shift+insert"], "command": "paste", "args": {"clipboard": "selection"} },
     { "keys": ["ctrl+alt+v"], "command": "paste_from_history" },
@@ -20,6 +22,8 @@
     { "keys": ["ctrl+0"], "command": "reset_font_size" },
 
     // Origami and to support origami
+    { "keys": ["alt+-"], "command": "jump_back" },
+
     { "keys": ["ctrl+a", "ctrl+a"], "command": "select_all" },
     { "keys": ["ctrl+a", "ctrl+up"], "command": "create_pane", "args": {"direction": "up"} },
     { "keys": ["ctrl+a", "ctrl+right"], "command": "create_pane", "args": {"direction": "right"} },

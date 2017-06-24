@@ -1,5 +1,9 @@
 {
 	"bootstrapped": true,
+	"channels":
+	[
+		"https://packagecontrol.io/channel_v3.json"
+	],
 	"in_process_packages":
 	[
 	],
@@ -30,6 +34,7 @@
 		"LoremIpsum",
 		"Macroptimize",
 		"Makefile Improved",
+		"Markdown Preview",
 		"MarkdownLivePreview",
 		"Material Theme",
 		"MoveTab",
@@ -48,5 +53,8 @@
 		"TrailingSpaces",
 		"Unicode Character Highlighter",
 		"URLEncode"
+	],
+	"repositories":
+	[
 	]
 }
