@@ -65,5 +65,6 @@
     { "keys": ["ctrl+space"], "command": "auto_complete"},
     { "keys": ["ctrl+.", "ctrl+g"], "command": "go_guru_goto_definition", "args": {"output": false}, "context": [{ "key": "selector", "operator": "equal", "operand": "source.go" }] },
     { "keys": ["ctrl+.", "ctrl+g"], "command": "anaconda_goto", "context": [{"key": "selector", "operator": "equal", "operand": "source.python"}] },
+    { "keys": ["ctrl+.", "ctrl+h"], "command": "gs_doc", "args": {"mode": "hint"}, "context": [{"key": "selector", "operator": "equal", "operand": "source.go"}] },
 
 ]
