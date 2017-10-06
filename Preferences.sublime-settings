@@ -88,14 +88,14 @@
 		"build",
 		"site"
 	],
-	"font_face": "Monaco for Powerline",
+	"font_face": "Fira code",
 	"font_options":
 	[
 		"subpixel_antialias",
 		"gray_antialias",
 		"directwrite"
 	],
-	"font_size": 12,
+	"font_size": 13,
 	"fonts_list":
 	[
 		{
@@ -144,6 +144,12 @@
 			"font_face": "DejaVuSansMono",
 			"font_size": 13,
 			"line_padding_bottom": -1,
+			"line_padding_top": 0
+		},
+		{
+			"font_face": "Fira code",
+			"font_size": 13,
+			"line_padding_bottom": 0,
 			"line_padding_top": 0
 		}
 	],
