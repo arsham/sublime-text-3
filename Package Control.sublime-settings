@@ -9,13 +9,14 @@
 	],
 	"installed_packages":
 	[
+		"A File Icon",
 		"Alignment",
 		"Anaconda",
 		"ApplySyntax",
 		"BracketHighlighter",
 		"Case Conversion",
 		"Codec",
-		"ColorSchemeSelector",
+		"Colorsublime",
 		"DataConverter",
 		"Djaneiro",
 		"Django Lookup Snippets",
