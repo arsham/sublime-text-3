@@ -157,6 +157,12 @@
 			"font_size": 12,
 			"line_padding_bottom": 0,
 			"line_padding_top": 0
+		},
+		{
+			"font_face": "Hack",
+			"font_size": 12,
+			"line_padding_bottom": 0,
+			"line_padding_top": 0
 		}
 	],
 	"highlight_line": true,

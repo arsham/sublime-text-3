@@ -22,6 +22,7 @@
 		"Django Lookup Snippets",
 		"Dockerfile Syntax Highlighting",
 		"Dotfiles Syntax Highlighting",
+		"Emoji",
 		"File Rename",
 		"FontCycler",
 		"Generate Password",
@@ -55,6 +56,7 @@
 		"SyncedSideBar",
 		"TrailingSpaces",
 		"Unicode Character Highlighter",
+		"UnicodeMath",
 		"URLEncode"
 	],
 	"repositories":
