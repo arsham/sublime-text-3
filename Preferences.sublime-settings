@@ -170,7 +170,6 @@
 	"ignored_packages":
 	[
 		"ActionScript",
-		"Anaconda",
 		"AppleScript",
 		"ASP",
 		"Batch File",
@@ -180,8 +179,6 @@
 		"Color Scheme - Default",
 		"CSS",
 		"D",
-		"Djaneiro",
-		"Django Lookup Snippets",
 		"Erlang",
 		"Graphviz",
 		"Groovy",
@@ -300,5 +297,5 @@
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"use_tab_stops": true,
-	"word_wrap": "false"
+	"word_wrap": false
 }
