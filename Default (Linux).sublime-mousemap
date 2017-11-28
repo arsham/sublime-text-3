@@ -1,7 +1,7 @@
 [
     {
         "button": "button2",
-        "modifiers": ["alt"],
+        "modifiers": ["super"],
         "command": "anaconda_goto",
         "press_command": "drag_select",
         "context": [

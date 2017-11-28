@@ -31,6 +31,7 @@
 		"GoRename",
 		"GoSublime",
 		"HaoGist",
+		"Hipster",
 		"Increment Selection",
 		"Javascript Beautify",
 		"Jump Along Indent",
@@ -59,7 +60,8 @@
 		"TrailingSpaces",
 		"Unicode Character Highlighter",
 		"UnicodeMath",
-		"URLEncode"
+		"URLEncode",
+		"ZSH"
 	],
 	"repositories":
 	[
