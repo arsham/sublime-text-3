@@ -44,10 +44,14 @@
     { "keys": ["super+c"], "command": "resize_pane", "args": {"orientation": "cols"} },
     { "keys": ["super+r"], "command": "resize_pane", "args": {"orientation": "rows"} },
 
-    // super + < decrease width
+    // decrease width
     { "keys": ["super+,"], "command": "pane_pane_resize", "args": { "dimension": "width", "resize": "decrease" } },
-    // super + > increase width
+    // increase width
     { "keys": ["super+."], "command": "pane_pane_resize", "args": { "dimension": "width", "resize": "increase" } },
+    // decrease height
+    { "keys": ["super+shift+,"], "command": "pane_pane_resize", "args": { "dimension": "height", "resize": "decrease" } },
+    // increase height
+    { "keys": ["super+shift+."], "command": "pane_pane_resize", "args": { "dimension": "height", "resize": "increase" } },
 
     // { "keys": ["super+.", "super+g"], "command": "godef" },
     { "keys": ["ctrl+space"], "command": "auto_complete"},
