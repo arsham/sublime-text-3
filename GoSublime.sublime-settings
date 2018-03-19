@@ -3,15 +3,14 @@
         "GOPATH": "/home/arsham/Projects/Go:/usr/bin/go",
         "PATH": "/home/arsham/Projects/Go/bin:$PATH:/usr/bin",
     },
-    "autocomplete_suggest_imports": true,
     "comp_lint_enabled": true,
-    "fmt_cmd": ["gofmt", "-s"],
+    "ipc_timeout": 2,
+    "fmt_cmd": ["goimports", "-srcdir", "$_dir"],
     "on_save": [
         {"cmd": "gs_comp_lint"},
         {"cmd": "go install"},
     ],
     "comp_lint_commands": [
-        {"cmd": ["goimports -w $_fn"] , "shell": true},
         {"cmd": ["golint $_fn"], "shell": true},
         {"cmd": ["go", "vet"]},
         {"cmd": ["goconst $_dir"], "shell": true},
