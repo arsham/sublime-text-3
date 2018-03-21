@@ -8,9 +8,9 @@
     "fmt_cmd": ["goimports", "-srcdir", "$_dir"],
     "on_save": [
         {"cmd": "gs_comp_lint"},
-        {"cmd": "go install"},
     ],
     "comp_lint_commands": [
+        {"cmd": ["go", "build", "-i"]},
         {"cmd": ["golint $_fn"], "shell": true},
         {"cmd": ["go", "vet"]},
         {"cmd": ["goconst $_dir"], "shell": true},
