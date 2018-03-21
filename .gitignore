@@ -15,4 +15,8 @@
 !GitGutter.sublime-settings
 !GoTests.sublime-settings
 !ReviewMyself.sublime-settings
-!/Macros/
+!GoSublime
+GoSublime/*
+!GoSublime/src
+GoSublime/src/*
+!GoSublime/src/margo

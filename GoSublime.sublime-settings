@@ -3,18 +3,4 @@
         "GOPATH": "/home/arsham/Projects/Go:/usr/bin/go",
         "PATH": "/home/arsham/Projects/Go/bin:$PATH:/usr/bin",
     },
-    "comp_lint_enabled": true,
-    "ipc_timeout": 2,
-    "fmt_cmd": ["goimports", "-srcdir", "$_dir"],
-    "on_save": [
-        {"cmd": "gs_comp_lint"},
-    ],
-    "comp_lint_commands": [
-        {"cmd": ["go", "build", "-i"]},
-        {"cmd": ["golint $_fn"], "shell": true},
-        {"cmd": ["go", "vet"]},
-        {"cmd": ["goconst $_dir"], "shell": true},
-        {"cmd": ["usedexports $_dir"], "shell": true},
-        {"cmd": ["ineffassign $_fn"], "shell": true},
-    ],
 }
