@@ -14,21 +14,11 @@ func Margo(ma mg.Args) {
 	// and should ideally not block for more than a couple milliseconds
 	ma.Store.Use(
 		// add the day and time to the status bar
-		DayTimeStatus,
-
-		// both GoFmt and GoImports will automatically disable the GoSublime version
-		// you will need to install the `goimports` tool manually
-		// https://godoc.org/golang.org/x/tools/cmd/goimports
-		//
-		// golang.GoFmt,
-		// or
+		// DayTimeStatus,
 		golang.GoImports,
 
 		// use gocode for autocompletion
 		&golang.Gocode{
-			// automatically install missing packages
-			// Autobuild: true,
-
 			// autocompete packages that are not yet imported
 			// this goes well with GoImports
 			UnimportedPackages: true,
@@ -39,22 +29,16 @@ func Margo(ma mg.Args) {
 
 		// add some default context aware-ish snippets
 		golang.Snippets,
-
-		// add our own snippets
+		MySnippets,
 
 		// check the file for syntax errors
 		&golang.SyntaxCheck{},
-
-		// add our own snippets
-		MySnippets,
 
 		// run `go install` on save
 		// or use GoInstallDiscardBinaries which will additionally set $GOBIN
 		// to a temp directory so binaries are not installed into your $PATH
 		//
 		golang.GoInstall("-i"),
-		// or
-		// golang.GoInstallDiscardBinaries(),
 
 		// run `go test -race` on save
 		// in go1.10, go vet is ran automatically
@@ -66,6 +50,10 @@ func Margo(ma mg.Args) {
 		&golang.Linter{Label: "Go/GoConst", Name: "goconst", Args: []string{"."}},
 		&golang.Linter{Label: "Go/UsedExports", Name: "usedexports", Args: []string{"."}},
 		&golang.Linter{Label: "Go/IneffAssign", Name: "ineffassign", Args: []string{"-n", "."}},
+		&golang.Linter{Label: "Go/Cyclo", Name: "cyclo", Args: []string{"--max-complexity", "15", "."}},
+		// &golang.Linter{Label: "Go/Interfacer", Name: "interfacer", Args: []string{"./..."}},
+		// &golang.Linter{Label: "Go/ErrorCheck", Name: "errcheck", Args: []string{"-ignoretests", "."}},
+		// &golang.Linter{Label: "Go/Unconver", Name: "unconvert", Args: []string{"."}},
 	)
 }
 
@@ -105,6 +93,21 @@ var MySnippets = golang.SnippetFuncs{
 				Query: "if err",
 				Title: "err != nil { return }",
 				Src:   "if ${1:err} != nil {\n\treturn $0\n}",
+			},
+		}
+		//
+	},
+	func(cx *golang.CompletionCtx) []mg.Completion {
+		// if we're not in a block (i.e. function), do nothing
+		if !cx.Scope.Is(golang.BlockScope) {
+			return nil
+		}
+
+		return []mg.Completion{
+			{
+				Query: "for ever",
+				Title: "for { ... }",
+				Src:   "for {\n\t$0\n}",
 			},
 		}
 		//
