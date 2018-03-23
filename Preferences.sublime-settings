@@ -184,14 +184,15 @@
 		"C++",
 		"Clojure",
 		"Codec",
-		"Color Scheme - Default",
+		"Colorsublime",
+		"Colorsublime - Themes",
 		"CSS",
 		"D",
 		"Djaneiro",
 		"Django Lookup Snippets",
-		"Emoji",
 		"Erlang",
 		"FontCycler",
+		"Generate Password",
 		"GitGutter",
 		"Graphviz",
 		"Groovy",
@@ -203,6 +204,8 @@
 		"Lua",
 		"Makefile",
 		"Makefile Improved",
+		"Markdown Preview",
+		"MarkdownLivePreview",
 		"Matlab",
 		"nginx",
 		"Objective-C",
@@ -221,7 +224,8 @@
 		"Unicode Character Highlighter",
 		"UnicodeMath",
 		"URLEncode",
-		"Vintage"
+		"Vintage",
+		"XML"
 	],
 	"ignored_words":
 	[

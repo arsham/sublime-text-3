@@ -20,3 +20,4 @@ GoSublime/*
 !GoSublime/src
 GoSublime/src/*
 !GoSublime/src/margo
+!project_manager.sublime-settings
