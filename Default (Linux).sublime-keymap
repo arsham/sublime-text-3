@@ -16,7 +16,8 @@
     { "keys": ["ctrl+0"], "command": "reset_font_size" },
 
     // Origami and to support origami
-    { "keys": ["alt+-"], "command": "jump_back" },
+    { "keys": ["alt+z"], "command": "jump_back" },
+    { "keys": ["alt+shift+z"], "command": "jump_forward" },
 
     { "keys": ["super+ctrl+up"], "command": "create_pane", "args": {"direction": "up"} },
     { "keys": ["super+ctrl+right"], "command": "create_pane", "args": {"direction": "right"} },

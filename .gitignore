@@ -21,3 +21,5 @@ GoSublime/*
 GoSublime/src/*
 !GoSublime/src/margo
 !project_manager.sublime-settings
+!TodoReview.sublime-settings
+!Default.sublime-commands
