@@ -14,7 +14,6 @@
 !bh_core.sublime-settings
 !GitGutter.sublime-settings
 !GoTests.sublime-settings
-!ReviewMyself.sublime-settings
 !GoSublime
 GoSublime/*
 !GoSublime/src
@@ -23,3 +22,4 @@ GoSublime/src/*
 !project_manager.sublime-settings
 !TodoReview.sublime-settings
 !Default.sublime-commands
+!Material-Theme-Palenight.sublime-theme

@@ -188,6 +188,7 @@
 		"Colorsublime - Themes",
 		"CSS",
 		"D",
+		"DataConverter",
 		"Djaneiro",
 		"Django Lookup Snippets",
 		"Erlang",
@@ -197,11 +198,12 @@
 		"Graphviz",
 		"Groovy",
 		"Haskell",
-		"Java",
 		"Javascript Beautify",
+		"Keymaps",
 		"LaTeX",
 		"Lisp",
 		"Log Highlight",
+		"LoremIpsum",
 		"Lua",
 		"Makefile",
 		"Makefile Improved",
@@ -226,7 +228,8 @@
 		"UnicodeMath",
 		"URLEncode",
 		"Vintage",
-		"XML"
+		"XML",
+		"ZSH"
 	],
 	"ignored_words":
 	[

@@ -1,7 +1,0 @@
-{
-    "todo_patterns": [
-        "TODO\\s*:+\\s*(?P<todo>.*)$"
-    ],
-    "only_care_file_patterns": ["*.tzt", "*.py", "*.go", "*.md"],
-    "ignored_dir_patterns": [".svn", ".git", ".hg", "CVS", "vendor"],
-}
