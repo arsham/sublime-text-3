@@ -50,7 +50,7 @@ func Margo(ma mg.Args) {
 		&golang.Linter{Label: "Go/GoConst", Name: "goconst", Args: []string{"."}},
 		&golang.Linter{Label: "Go/UsedExports", Name: "usedexports", Args: []string{"."}},
 		&golang.Linter{Label: "Go/IneffAssign", Name: "ineffassign", Args: []string{"-n", "."}},
-		&golang.Linter{Label: "Go/Cyclo", Name: "cyclo", Args: []string{"--max-complexity", "15", "."}},
+		// &golang.Linter{Label: "Go/Cyclo", Name: "cyclo", Args: []string{"--max-complexity", "15", "."}},
 		// &golang.Linter{Label: "Go/Interfacer", Name: "interfacer", Args: []string{"./..."}},
 		// &golang.Linter{Label: "Go/ErrorCheck", Name: "errcheck", Args: []string{"-ignoretests", "."}},
 		// &golang.Linter{Label: "Go/Unconver", Name: "unconvert", Args: []string{"."}},
@@ -105,9 +105,9 @@ var MySnippets = golang.SnippetFuncs{
 
 		return []mg.Completion{
 			{
-				Query: "for ever",
-				Title: "for { ... }",
-				Src:   "for {\n\t$0\n}",
+				Query: "ppp",
+				Title: "pprint",
+				Src:   "pp.Println($0)",
 			},
 		}
 		//

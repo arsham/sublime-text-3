@@ -1,4 +1,4 @@
 {
     "GOPATH": "/home/arsham/Projects/Go",
-    "gotests_cmd": "/home/arsham/Projects/Go/bin/gotests",
+    // "gotests_cmd": "/home/arsham/Projects/Go/bin/gotests",
 }
