@@ -109,6 +109,22 @@ var MySnippets = golang.SnippetFuncs{
 				Title: "pprint",
 				Src:   "pp.Println($0)",
 			},
+			{
+				Query: "terrorf",
+				Title: "t.Errorf() condition",
+				Src: `if $1 {
+	t.Errorf("$2: $3 = ($4); want ($5)", $6)
+}
+`,
+			},
+			{
+				Query: "terror",
+				Title: "t.Error() condition",
+				Src: `if $1 {
+	t.Error("$2: $3 = ($4); want ($5)")
+}
+`,
+			},
 		}
 		//
 	},

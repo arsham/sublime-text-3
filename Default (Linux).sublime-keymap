@@ -61,4 +61,10 @@
     { "keys": ["ctrl+.", "ctrl+h"], "command": "gs_doc", "args": {"mode": "hint"}, "context": [{"key": "selector", "operator": "equal", "operand": "source.go"}] },
 
     { "keys": ["ctrl+alt+o"], "command": "project_manager", "args": {"action": "new"} },
+    { "keys": ["ctrl+alt+enter"], "command": "run_macro_file", "args": {"file": "Packages/User/Macros/bracket_end_return.sublime-macro"} },
+    { "keys": ["ctrl+,"], "command": "run_macro_file", "args": {"file": "Packages/User/Macros/comma_at_eol.sublime-macro"} },
+    { "keys": ["ctrl+b", "ctrl+b"], "command": "toggle_bookmark" },
+    { "keys": ["ctrl+b", "ctrl+n"], "command": "next_bookmark" },
+    { "keys": ["ctrl+b", "ctrl+c"], "command": "clear_bookmarks" },
+    { "keys": ["ctrl+b", "ctrl+a"], "command": "select_all_bookmarks" },
 ]

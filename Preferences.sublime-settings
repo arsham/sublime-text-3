@@ -93,7 +93,7 @@
 		"build",
 		"site"
 	],
-	"font_face": "Fira code",
+	"font_face": "Monaco",
 	"font_options":
 	[
 		"subpixel_antialias",
@@ -302,7 +302,7 @@
 		"*.log"
 	],
 	"line_padding_bottom": -1,
-	"line_padding_top": 0,
+	"line_padding_top": -1,
 	"margin": 0,
 	"material_theme_accent_brba": true,
 	"material_theme_accent_scrollbars": true,
