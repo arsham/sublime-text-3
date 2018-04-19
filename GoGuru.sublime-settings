@@ -1,8 +1,7 @@
 {
     "goguru_debug": false,
     "goguru_jumpto_definition": false,
-    "goguru_env":
-    {
+    "goguru_env": {
         "GOPATH": "/home/arsham/Projects/Go",
         "PATH": "/home/arsham/Projects/Go/bin:$PATH:/usr/lib/go/bin:/usr/bin",
     },

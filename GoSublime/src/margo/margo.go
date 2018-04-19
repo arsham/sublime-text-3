@@ -9,13 +9,7 @@ import (
 
 // Margo is the entry-point to margo
 func Margo(ma mg.Args) {
-	// add our reducers (margo plugins) to the store
-	// they are run in the specified order
-	// and should ideally not block for more than a couple milliseconds
 	ma.Store.Use(
-		// add the day and time to the status bar
-		// DayTimeStatus,
-		golang.GoImports,
 
 		// use gocode for autocompletion
 		&golang.Gocode{
@@ -27,21 +21,9 @@ func Margo(ma mg.Args) {
 			ShowFuncParams: true,
 		},
 
-		// add some default context aware-ish snippets
-		golang.Snippets,
-		MySnippets,
-
-		// check the file for syntax errors
 		&golang.SyntaxCheck{},
-
-		// run `go install` on save
-		// or use GoInstallDiscardBinaries which will additionally set $GOBIN
-		// to a temp directory so binaries are not installed into your $PATH
-		//
+		golang.GoImports,
 		golang.GoInstall("-i"),
-
-		// run `go test -race` on save
-		// in go1.10, go vet is ran automatically
 		// golang.GoTest("-race"),
 		golang.GoTest(),
 
@@ -54,6 +36,9 @@ func Margo(ma mg.Args) {
 		// &golang.Linter{Label: "Go/Interfacer", Name: "interfacer", Args: []string{"./..."}},
 		// &golang.Linter{Label: "Go/ErrorCheck", Name: "errcheck", Args: []string{"-ignoretests", "."}},
 		// &golang.Linter{Label: "Go/Unconver", Name: "unconvert", Args: []string{"."}},
+
+		golang.Snippets,
+		MySnippets,
 	)
 }
 

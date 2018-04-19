@@ -21,7 +21,8 @@
 		"os",
 		"regexp",
 		"csv",
-		"Nvidia"
+		"Nvidia",
+		"enterance"
 	],
 	"auto_complete_commit_on_tab": false,
 	"auto_complete_selector": "source, text",
@@ -79,6 +80,8 @@
 		"*.class",
 		"*.psd",
 		"*.db",
+		"*.crt",
+		"server.key",
 		"*.sublime-workspace"
 	],
 	"folder_exclude_patterns":
@@ -176,7 +179,6 @@
 	"ignored_packages":
 	[
 		"ActionScript",
-		"Anaconda",
 		"AppleScript",
 		"ASCII Decorator",
 		"ASP",
@@ -185,16 +187,11 @@
 		"C++",
 		"Clojure",
 		"Codec",
-		"Colorsublime",
-		"Colorsublime - Themes",
 		"D",
 		"DataConverter",
-		"Djaneiro",
 		"Django Lookup Snippets",
 		"Erlang",
-		"FontCycler",
 		"Generate Password",
-		"GitGutter",
 		"Graphviz",
 		"Groovy",
 		"Haskell",
@@ -207,10 +204,8 @@
 		"Lua",
 		"Makefile",
 		"Makefile Improved",
-		"Markdown Preview",
 		"MarkdownLivePreview",
 		"Matlab",
-		"nginx",
 		"Objective-C",
 		"OCaml",
 		"Pascal",
@@ -228,8 +223,7 @@
 		"UnicodeMath",
 		"URLEncode",
 		"Vintage",
-		"XML",
-		"ZSH"
+		"XML"
 	],
 	"ignored_words":
 	[
