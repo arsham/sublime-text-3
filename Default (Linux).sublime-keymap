@@ -58,7 +58,7 @@
     { "keys": ["ctrl+space"], "command": "auto_complete"},
     { "keys": ["ctrl+.", "ctrl+g"], "command": "go_guru_goto_definition", "args": {"output": false}, "context": [{ "key": "selector", "operator": "equal", "operand": "source.go" }] },
     { "keys": ["ctrl+.", "ctrl+g"], "command": "anaconda_goto", "context": [{"key": "selector", "operator": "equal", "operand": "source.python"}] },
-    { "keys": ["ctrl+.", "ctrl+h"], "command": "gs_doc", "args": {"mode": "hint"}, "context": [{"key": "selector", "operator": "equal", "operand": "source.go"}] },
+    { "keys": ["ctrl+.", "ctrl+h"], "command": "gs_doc", "args": {"mode": "goto"}, "context": [{"key": "selector", "operator": "equal", "operand": "source.go"}] },
 
     { "keys": ["ctrl+alt+o"], "command": "project_manager", "args": {"action": "new"} },
     { "keys": ["ctrl+alt+enter"], "command": "run_macro_file", "args": {"file": "Packages/User/Macros/bracket_end_return.sublime-macro"} },

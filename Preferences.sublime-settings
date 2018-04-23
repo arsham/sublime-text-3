@@ -40,7 +40,11 @@
 		"*.pdf",
 		"*.swf",
 		"*.jar",
-		"*.zip"
+		"*.zip",
+		"*.gz",
+		"*.tar",
+		"*.tar.gz",
+		"*.tar.bz2"
 	],
 	"bold_folder_labels": true,
 	"build_output_to_tab": true,
