@@ -13,11 +13,11 @@
 		"Alignment",
 		"Anaconda",
 		"ApplySyntax",
+		"Arsham - SublimeGist",
 		"ASCII Decorator",
 		"BracketHighlighter",
 		"Case Conversion",
 		"Codec",
-		"Colorsublime",
 		"CSS3",
 		"DataConverter",
 		"Derby",
@@ -33,8 +33,6 @@
 		"GoRename",
 		"GoSublime",
 		"GoTests",
-		"HaoGist",
-		"Hipster",
 		"HTMLBeautify",
 		"Increment Selection",
 		"Javascript Beautify",
@@ -46,7 +44,6 @@
 		"Macroptimize",
 		"Makefile Improved",
 		"Markdown Preview",
-		"MarkdownLivePreview",
 		"Material Theme",
 		"Material Theme - Appbar",
 		"MoveTab",
@@ -61,6 +58,7 @@
 		"Pretty JSON",
 		"ProjectManager",
 		"Python PEP8 Autoformat",
+		"QML",
 		"Random Everything",
 		"Sass",
 		"SASS Snippets",
@@ -69,6 +67,7 @@
 		"SideBarEnhancements",
 		"SQLTools",
 		"Sublime Bookmarks",
+		"SublPlugs",
 		"SyncedSideBar",
 		"Table Editor",
 		"TodoReview",
@@ -79,5 +78,6 @@
 	],
 	"repositories":
 	[
+		"https://gist.githubusercontent.com/arsham/952babd16190f295f625e04c6532a5d1/raw/"
 	]
 }
