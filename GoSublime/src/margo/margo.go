@@ -39,6 +39,7 @@ func Margo(ma mg.Args) {
 
 		golang.Snippets,
 		MySnippets,
+		qtSnippets,
 	)
 }
 
@@ -98,7 +99,7 @@ var MySnippets = golang.SnippetFuncs{
 				Query: "terrorf",
 				Title: "t.Errorf() condition",
 				Src: `if $1 {
-	t.Errorf("$2: $3 = ($4); want ($5)", $6)
+    t.Errorf("$2: $3 = ($4); want ($5)", $6)
 }
 `,
 			},
@@ -106,11 +107,64 @@ var MySnippets = golang.SnippetFuncs{
 				Query: "terror",
 				Title: "t.Error() condition",
 				Src: `if $1 {
-	t.Error("$2: $3 = ($4); want ($5)")
+    t.Error("$2: $3 = ($4); want ($5)")
 }
 `,
 			},
 		}
 		//
+	},
+}
+
+var qtSnippets = golang.SnippetFuncs{
+	func(cx *golang.CompletionCtx) []mg.Completion {
+		return []mg.Completion{
+			{
+				Query: "QtqmlResource",
+				Title: "Load a qml resource",
+				Src: `
+    core.QCoreApplication_SetAttribute(core.Qt__AA_EnableHighDpiScaling, true)
+    core.QCoreApplication_SetAttribute(core.Qt__AA_ShareOpenGLContexts, true)
+
+    gui.NewQGuiApplication(len(os.Args), os.Args)
+    if quickcontrols2.QQuickStyle_Name() == "" {
+        quickcontrols2.QQuickStyle_SetStyle("Material")
+    }
+
+    var engine = qml.NewQQmlApplicationEngine(nil)
+    engine.Load(core.NewQUrl3("qrc:/${0:filepath}.qml", 0))
+    gui.QGuiApplication_Exec()
+`,
+			},
+			{
+				Query: "QtuiResource",
+				Title: "Load a ui resource",
+				Src: `
+    core.QCoreApplication_SetAttribute(core.Qt__AA_ShareOpenGLContexts, true)
+    core.QCoreApplication_SetAttribute(core.Qt__AA_EnableHighDpiScaling, true)
+
+    widgets.NewQApplication(len(os.Args), os.Args)
+    window := widgets.NewQMainWindow(nil, 0)
+    dialog, err := qtlib.LoadResource(window, "./qml/${0:filepath}.ui")
+	if err != nil {
+		${1:return err}
+	}
+    window.SetupUi(dialog)
+
+    dialog.Show()
+    widgets.QApplication_Exec()
+                `,
+			},
+			{
+				Query: "QtuiFindElement",
+				Title: "Find and create an element from a widget",
+				Src: `
+    ${1:name} := widgets.NewQ${2:SomethingPointer}(
+        ${3:parent}.FindChild("${1:name}", core.Qt__FindChildrenRecursively).Pointer(),
+    )
+    $4
+                `,
+			},
+		}
 	},
 }
