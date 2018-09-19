@@ -3,31 +3,41 @@ package margo
 import (
 	"time"
 
-	"disposa.blue/margo/golang"
-	"disposa.blue/margo/mg"
+	"margo.sh/golang"
+	"margo.sh/mg"
 )
 
 // Margo is the entry-point to margo
-func Margo(ma mg.Args) {
-	ma.Store.Use(
-
-		// use gocode for autocompletion
+func Margo(m mg.Args) {
+	m.Use(
+		&mg.MOTD{
+			// Interval, if set, specifies how often to automatically fetch messages from Endpoint
+			// Interval: 3600e9, // automatically fetch updates every hour
+		},
 		&golang.Gocode{
-			// autocompete packages that are not yet imported
-			// this goes well with GoImports
-			UnimportedPackages: true,
-
-			// show the function parameters. this can take up a lot of space
-			ShowFuncParams: true,
+			Source:          false,
+			ShowFuncParams:  true,
+			ProposeTests:    false,
+			ProposeBuiltins: true,
 		},
 
+		mg.NewReducer(func(mx *mg.Ctx) *mg.State {
+			return mx.SetConfig(mx.Config.EnabledForLangs(
+				mg.AllLangs,
+			))
+		}),
 		&golang.SyntaxCheck{},
 		golang.GoImports,
-		golang.GoInstall("-i"),
+		golang.GoInstallDiscardBinaries("-i"),
 		// golang.GoTest("-race"),
 		golang.GoTest(),
 
-		// run `golint` on save
+		// run gometalinter on save
+		// &golang.Linter{Name: "gometalinter", Args: []string{
+		// 	"--disable=gas",
+		// 	"--fast",
+		// }},
+
 		&golang.Linter{Label: "Go/Lint", Name: "golint"},
 		&golang.Linter{Label: "Go/GoConst", Name: "goconst", Args: []string{"."}},
 		&golang.Linter{Label: "Go/UsedExports", Name: "usedexports", Args: []string{"."}},
@@ -39,23 +49,44 @@ func Margo(ma mg.Args) {
 
 		golang.Snippets,
 		MySnippets,
-		qtSnippets,
+		&golang.Guru{},
+		&DayTimeStatus{},
+		&golang.GoCmd{},
+		&golang.GocodeCalltips{
+			Source: false,
+		},
+
+		// Add user commands for running tests and benchmarks
+		// gs: this adds support for the tests command palette `ctrl+.`,`ctrl+t` or `cmd+.`,`cmd+t`
+		&golang.TestCmds{
+			// additional args to add to the command when running tests and examples
+			TestArgs: []string{},
+
+			// additional args to add to the command when running benchmarks
+			BenchArgs: []string{"-benchmem"},
+		},
+
+		// golang.GoVet(),
 	)
 }
 
 // DayTimeStatus adds the current day and time to the status bar
-var DayTimeStatus = mg.Reduce(func(mx *mg.Ctx) *mg.State {
-	if _, ok := mx.Action.(mg.Started); ok {
-		dispatch := mx.Store.Dispatch
-		// kick off the ticker when we start
-		go func() {
-			ticker := time.NewTicker(1 * time.Second)
-			for range ticker.C {
-				dispatch(mg.Render)
-			}
-		}()
-	}
+type DayTimeStatus struct {
+	mg.ReducerType
+}
 
+func (dts DayTimeStatus) ReducerMount(mx *mg.Ctx) {
+	// kick off the ticker when we start
+	dispatch := mx.Store.Dispatch
+	go func() {
+		ticker := time.NewTicker(1 * time.Second)
+		for range ticker.C {
+			dispatch(mg.Render)
+		}
+	}()
+}
+
+func (dts DayTimeStatus) Reduce(mx *mg.Ctx) *mg.State {
 	// we always want to render the time
 	// otherwise it will sometimes disappear from the status bar
 	now := time.Now()
@@ -64,10 +95,10 @@ var DayTimeStatus = mg.Reduce(func(mx *mg.Ctx) *mg.State {
 		format = "Mon, 15 04"
 	}
 	return mx.AddStatus(now.Format(format))
-})
+}
 
 // MySnippets is a slice of functions returning our own snippets
-var MySnippets = golang.SnippetFuncs{
+var MySnippets = golang.SnippetFuncs(
 	func(cx *golang.CompletionCtx) []mg.Completion {
 		// if we're not in a block (i.e. function), do nothing
 		if !cx.Scope.Is(golang.BlockScope) {
@@ -81,7 +112,6 @@ var MySnippets = golang.SnippetFuncs{
 				Src:   "if ${1:err} != nil {\n\treturn $0\n}",
 			},
 		}
-		//
 	},
 	func(cx *golang.CompletionCtx) []mg.Completion {
 		// if we're not in a block (i.e. function), do nothing
@@ -111,12 +141,24 @@ var MySnippets = golang.SnippetFuncs{
 }
 `,
 			},
+			{
+				Query: "tcases",
+				Title: "test cases",
+				Src: `tcs := []struct {
+    name string
+    $1
+}{}
+for _, tc := range tcs {
+    t.Run(tc.name, func(t *testing.T) {
+    })
+}`,
+			},
 		}
 		//
 	},
-}
+)
 
-var qtSnippets = golang.SnippetFuncs{
+var qtSnippets = golang.SnippetFuncs(
 	func(cx *golang.CompletionCtx) []mg.Completion {
 		return []mg.Completion{
 			{
@@ -146,9 +188,9 @@ var qtSnippets = golang.SnippetFuncs{
     widgets.NewQApplication(len(os.Args), os.Args)
     window := widgets.NewQMainWindow(nil, 0)
     dialog, err := qtlib.LoadResource(window, "./qml/${0:filepath}.ui")
-	if err != nil {
-		${1:return err}
-	}
+    if err != nil {
+        ${1:return err}
+    }
     window.SetupUi(dialog)
 
     dialog.Show()
@@ -167,4 +209,4 @@ var qtSnippets = golang.SnippetFuncs{
 			},
 		}
 	},
-}
+)

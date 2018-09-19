@@ -78,4 +78,11 @@
     //         }
     //     ]
     // }
+    {
+        "button": "button2",
+        "modifiers": ["ctrl"],
+        "press_command": "drag_select",
+        "command": "gs9o_open",
+        "args": {"run": ["goto.definition"], "focus_view": false, "show_view": false},
+    },
 ]
