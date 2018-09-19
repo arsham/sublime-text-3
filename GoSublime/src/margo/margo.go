@@ -10,10 +10,7 @@ import (
 // Margo is the entry-point to margo
 func Margo(m mg.Args) {
 	m.Use(
-		&mg.MOTD{
-			// Interval, if set, specifies how often to automatically fetch messages from Endpoint
-			// Interval: 3600e9, // automatically fetch updates every hour
-		},
+		&mg.MOTD{},
 		&golang.Gocode{
 			Source:          false,
 			ShowFuncParams:  true,
@@ -26,6 +23,7 @@ func Margo(m mg.Args) {
 				mg.AllLangs,
 			))
 		}),
+
 		&golang.SyntaxCheck{},
 		golang.GoImports,
 		golang.GoInstallDiscardBinaries("-i"),
@@ -42,7 +40,8 @@ func Margo(m mg.Args) {
 		&golang.Linter{Label: "Go/GoConst", Name: "goconst", Args: []string{"."}},
 		&golang.Linter{Label: "Go/UsedExports", Name: "usedexports", Args: []string{"."}},
 		&golang.Linter{Label: "Go/IneffAssign", Name: "ineffassign", Args: []string{"-n", "."}},
-		// &golang.Linter{Label: "Go/Cyclo", Name: "cyclo", Args: []string{"--max-complexity", "15", "."}},
+		&golang.Linter{Label: "Go/Cyclo", Name: "cyclo", Args: []string{"--max-complexity", "15", "."}},
+		// The following linters are slow
 		// &golang.Linter{Label: "Go/Interfacer", Name: "interfacer", Args: []string{"./..."}},
 		// &golang.Linter{Label: "Go/ErrorCheck", Name: "errcheck", Args: []string{"-ignoretests", "."}},
 		// &golang.Linter{Label: "Go/Unconver", Name: "unconvert", Args: []string{"."}},
@@ -57,7 +56,6 @@ func Margo(m mg.Args) {
 		},
 
 		// Add user commands for running tests and benchmarks
-		// gs: this adds support for the tests command palette `ctrl+.`,`ctrl+t` or `cmd+.`,`cmd+t`
 		&golang.TestCmds{
 			// additional args to add to the command when running tests and examples
 			TestArgs: []string{},
@@ -114,6 +112,38 @@ var MySnippets = golang.SnippetFuncs(
 		}
 	},
 	func(cx *golang.CompletionCtx) []mg.Completion {
+		if !cx.Scope.Is(golang.BlockScope) || !cx.IsTestFile {
+			return nil
+		}
+		return []mg.Completion{
+			{
+				Query: "test error",
+				Title: "t.Error() condition",
+				Src:   "if $1 {\n\tt.Error(\"$2: $3 = ($4); want ($5)\")\n}",
+			},
+			{
+				Query: "test errorf",
+				Title: "t.Errorf() condition",
+				Src:   "if $1 {\n\tt.Errorf(\"$2: $3 = ($4); want ($5)\", $6)\n}",
+			},
+			{
+				Query: "test cases",
+				Title: "Test Cases",
+				Src:   "tcs := []struct {\n\tname string\n\t$1\n}{}\nfor _, tc := range tcs {\n\tt.Run(tc.name, func(t *testing.T) {\n\t})\n}",
+			},
+			{
+				Query: "patch method",
+				Title: "Monkey path a method",
+				Src:   "monkey.PatchInstanceMethod(reflect.TypeOf(${1:instance}), \"${2:method name}\", func(${3:receiver}, ${4:args}) ${5:return values} {\n\t\n})\ndefer monkey.UnpatchInstanceMethod(reflect.TypeOf(${1:instance}), \"${2:method name}\")",
+			},
+			{
+				Query: "patch func",
+				Title: "Monkey path a function",
+				Src:   "monkey.Patch(${1:time.Now}, ${2:func() time.Time} {\n})\ndefer monkey.Unpatch(${1:time.Now})",
+			},
+		}
+	},
+	func(cx *golang.CompletionCtx) []mg.Completion {
 		// if we're not in a block (i.e. function), do nothing
 		if !cx.Scope.Is(golang.BlockScope) {
 			return nil
@@ -124,34 +154,6 @@ var MySnippets = golang.SnippetFuncs(
 				Query: "ppp",
 				Title: "pprint",
 				Src:   "pp.Println($0)",
-			},
-			{
-				Query: "terrorf",
-				Title: "t.Errorf() condition",
-				Src: `if $1 {
-    t.Errorf("$2: $3 = ($4); want ($5)", $6)
-}
-`,
-			},
-			{
-				Query: "terror",
-				Title: "t.Error() condition",
-				Src: `if $1 {
-    t.Error("$2: $3 = ($4); want ($5)")
-}
-`,
-			},
-			{
-				Query: "tcases",
-				Title: "test cases",
-				Src: `tcs := []struct {
-    name string
-    $1
-}{}
-for _, tc := range tcs {
-    t.Run(tc.name, func(t *testing.T) {
-    })
-}`,
 			},
 		}
 		//
