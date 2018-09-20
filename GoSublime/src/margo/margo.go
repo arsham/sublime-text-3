@@ -31,16 +31,18 @@ func Margo(m mg.Args) {
 		golang.GoTest(),
 
 		// run gometalinter on save
-		// &golang.Linter{Name: "gometalinter", Args: []string{
-		// 	"--disable=gas",
-		// 	"--fast",
-		// }},
+		&golang.Linter{Name: "gometalinter", Args: []string{
+			"--fast",
+			"--cyclo-over=15",
+			"--disable=test",
+		}},
 
-		&golang.Linter{Label: "Go/Lint", Name: "golint"},
-		&golang.Linter{Label: "Go/GoConst", Name: "goconst", Args: []string{"."}},
-		&golang.Linter{Label: "Go/UsedExports", Name: "usedexports", Args: []string{"."}},
-		&golang.Linter{Label: "Go/IneffAssign", Name: "ineffassign", Args: []string{"-n", "."}},
-		&golang.Linter{Label: "Go/Cyclo", Name: "cyclo", Args: []string{"--max-complexity", "15", "."}},
+		// &golang.Linter{Label: "Go/Lint", Name: "golint"},
+		// &golang.Linter{Label: "Go/GoConst", Name: "goconst", Args: []string{"."}},
+		// &golang.Linter{Label: "Go/UsedExports", Name: "usedexports", Args: []string{"."}},
+		// &golang.Linter{Label: "Go/IneffAssign", Name: "ineffassign", Args: []string{"-n", "."}},
+		// &golang.Linter{Label: "Go/Cyclo", Name: "cyclo", Args: []string{"--max-complexity", "15", "."}},
+
 		// The following linters are slow
 		// &golang.Linter{Label: "Go/Interfacer", Name: "interfacer", Args: []string{"./..."}},
 		// &golang.Linter{Label: "Go/ErrorCheck", Name: "errcheck", Args: []string{"-ignoretests", "."}},
