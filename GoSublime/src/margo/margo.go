@@ -12,12 +12,14 @@ func Margo(m mg.Args) {
 	m.Use(
 		&mg.MOTD{},
 		&golang.Gocode{
-			Source:          false,
 			ShowFuncParams:  true,
 			ProposeTests:    false,
 			ProposeBuiltins: true,
 		},
-
+		&golang.MarGocodeCtl{
+			ImporterMode: golang.SrcImporterWithFallback,
+		},
+		&golang.GocodeCalltips{},
 		mg.NewReducer(func(mx *mg.Ctx) *mg.State {
 			return mx.SetConfig(mx.Config.EnabledForLangs(
 				mg.AllLangs,
@@ -53,9 +55,6 @@ func Margo(m mg.Args) {
 		&golang.Guru{},
 		&DayTimeStatus{},
 		&golang.GoCmd{},
-		&golang.GocodeCalltips{
-			Source: false,
-		},
 
 		// Add user commands for running tests and benchmarks
 		&golang.TestCmds{
