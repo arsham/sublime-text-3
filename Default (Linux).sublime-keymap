@@ -1,24 +1,20 @@
 [
+    { "keys": ["ctrl+alt+o"], "command": "project_manager", "args": {"action": "new"} },
     { "keys": ["super+a"], "command": "alignment" },
+
+    // Multi edit
     { "keys": ["ctrl+alt+d"], "command": "selection_fields", "args": {"mode": "smart"} },
     { "keys": ["ctrl+alt+f"], "command": "multi_find_all" },
     // jump and remove current selection in selection_fields
     { "keys": ["ctrl+alt+x"], "command": "selection_fields", "args": {"mode": "smart", "only_other": true} },
-
-    { "keys": ["shift+insert"], "command": "paste", "args": {"clipboard": "selection"} },
-    { "keys": ["ctrl+alt+v"], "command": "paste_from_history" },
-
     // add the current selections as a fields
     { "keys": ["ctrl+alt+a"], "command": "selection_fields", "args": {"mode": "add"} },
 
-    { "keys": ["ctrl+shift+8"], "command": "previous_font" },
-    { "keys": ["ctrl+shift+9"], "command": "next_font" },
-    { "keys": ["ctrl+0"], "command": "reset_font_size" },
+    // Clipboard
+    { "keys": ["shift+insert"], "command": "paste", "args": {"clipboard": "selection"} },
+    { "keys": ["ctrl+alt+v"], "command": "paste_from_history" },
 
-    // Origami and to support origami
-    { "keys": ["alt+z"], "command": "jump_back" },
-    { "keys": ["alt+shift+z"], "command": "jump_forward" },
-
+    // Origami
     { "keys": ["super+ctrl+up"], "command": "create_pane", "args": {"direction": "up"} },
     { "keys": ["super+ctrl+right"], "command": "create_pane", "args": {"direction": "right"} },
     { "keys": ["super+ctrl+down"], "command": "create_pane", "args": {"direction": "down"} },
@@ -54,17 +50,35 @@
     // increase height
     { "keys": ["super+shift+."], "command": "pane_pane_resize", "args": { "dimension": "height", "resize": "increase" } },
 
+    // Code navigation
     { "keys": ["ctrl+space"], "command": "auto_complete"},
     { "keys": ["ctrl+.", "ctrl+g"], "command": "anaconda_goto", "context": [{"key": "selector", "operator": "equal", "operand": "source.python"}] },
-    // { "keys": ["super+.", "super+g"], "command": "godef" },
     // { "keys": ["ctrl+.", "ctrl+g"], "command": "go_guru_goto_definition", "args": {"output": false}, "context": [{ "key": "selector", "operator": "equal", "operand": "source.go" }] },
     // { "keys": ["ctrl+.", "ctrl+h"], "command": "gs_doc", "args": {"mode": "goto"}, "context": [{"key": "selector", "operator": "equal", "operand": "source.go"}] },
+    { "keys": ["alt+z"], "command": "jump_back" },
+    { "keys": ["alt+shift+z"], "command": "jump_forward" },
 
-    { "keys": ["ctrl+alt+o"], "command": "project_manager", "args": {"action": "new"} },
+    // My Macros
     { "keys": ["ctrl+alt+enter"], "command": "run_macro_file", "args": {"file": "Packages/User/Macros/bracket_end_return.sublime-macro"} },
     { "keys": ["ctrl+,"], "command": "run_macro_file", "args": {"file": "Packages/User/Macros/comma_at_eol.sublime-macro"} },
+    { "keys": ["ctrl+shift+;"], "command": "run_macro_file", "args": {"file": "Packages/User/Macros/colon_at_eol.sublime-macro"} },
+
+    // Bookmarks
     { "keys": ["ctrl+b", "ctrl+b"], "command": "toggle_bookmark" },
     { "keys": ["ctrl+b", "ctrl+n"], "command": "next_bookmark" },
     { "keys": ["ctrl+b", "ctrl+c"], "command": "clear_bookmarks" },
     { "keys": ["ctrl+b", "ctrl+a"], "command": "select_all_bookmarks" },
+
+    // Marks
+    { "keys": ["ctrl+k", "ctrl+space"], "command": "set_mark" },
+    { "keys": ["ctrl+k", "ctrl+a"], "command": "select_to_mark" },
+    { "keys": ["ctrl+k", "ctrl+w"], "command": "delete_to_mark" },
+    { "keys": ["ctrl+k", "ctrl+x"], "command": "swap_with_mark" },
+    { "keys": ["ctrl+k", "ctrl+g"], "command": "clear_bookmarks", "args": {"name": "mark"} },
+    { "keys": ["ctrl+k", "ctrl+y"], "command": "yank" },
+
+    // Fonts
+    { "keys": ["ctrl+shift+8"], "command": "previous_font" },
+    { "keys": ["ctrl+shift+9"], "command": "next_font" },
+    { "keys": ["ctrl+0"], "command": "reset_font_size" },
 ]
