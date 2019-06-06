@@ -30,25 +30,29 @@ func Margo(m mg.Args) {
 		golang.GoImports,
 		golang.GoInstallDiscardBinaries("-i"),
 		// golang.GoTest("-race"),
-		golang.GoTest(),
+		golang.GoTest("-short"),
 
 		// run gometalinter on save
-		&golang.Linter{Name: "gometalinter", Args: []string{
+		// &golang.Linter{Name: "gometalinter", Args: []string{
+		// 	"--fast",
+		// 	"--cyclo-over=15",
+		// 	"--disable=test",
+		// 	"--disable=gosec",
+		// 	"--disable=gocyclo",
+		// }},
+		&golang.Linter{Name: "golangci-lint", Label: "golangci", Args: []string{
+			"run",
 			"--fast",
-			"--cyclo-over=15",
-			"--disable=test",
+			"--enable=prealloc",
+			"--enable=gosimple",
+			"--enable=staticcheck",
+			"--enable=unused",
+			"--enable=gocritic",
+			"--enable=unparam",
+			"--enable=interfacer",
+			"--skip-dirs=vendor",
+			// "--new-from-rev=HEAD~1",
 		}},
-
-		// &golang.Linter{Label: "Go/Lint", Name: "golint"},
-		// &golang.Linter{Label: "Go/GoConst", Name: "goconst", Args: []string{"."}},
-		// &golang.Linter{Label: "Go/UsedExports", Name: "usedexports", Args: []string{"."}},
-		// &golang.Linter{Label: "Go/IneffAssign", Name: "ineffassign", Args: []string{"-n", "."}},
-		// &golang.Linter{Label: "Go/Cyclo", Name: "cyclo", Args: []string{"--max-complexity", "15", "."}},
-
-		// The following linters are slow
-		// &golang.Linter{Label: "Go/Interfacer", Name: "interfacer", Args: []string{"./..."}},
-		// &golang.Linter{Label: "Go/ErrorCheck", Name: "errcheck", Args: []string{"-ignoretests", "."}},
-		// &golang.Linter{Label: "Go/Unconver", Name: "unconvert", Args: []string{"."}},
 
 		golang.Snippets,
 		MySnippets,
@@ -64,8 +68,6 @@ func Margo(m mg.Args) {
 			// additional args to add to the command when running benchmarks
 			BenchArgs: []string{"-benchmem"},
 		},
-
-		// golang.GoVet(),
 	)
 }
 
