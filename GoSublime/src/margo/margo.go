@@ -51,6 +51,7 @@ func Margo(m mg.Args) {
 			"--enable=unparam",
 			"--enable=interfacer",
 			"--skip-dirs=vendor",
+			"--tests=false",
 			// "--new-from-rev=HEAD~1",
 		}},
 
