@@ -54,6 +54,7 @@ func Margo(m mg.Args) {
 			"--tests=false",
 			// "--new-from-rev=HEAD~1",
 		}},
+		&golang.Linter{Name: "golint", Label: "Go/Lint"},
 
 		golang.Snippets,
 		MySnippets,
