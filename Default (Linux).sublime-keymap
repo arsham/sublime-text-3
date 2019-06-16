@@ -58,9 +58,8 @@
     { "keys": ["ctrl+.", "ctrl+g"],  "command": "anaconda_goto",         "context": [{ "key": "selector", "operator": "equal", "operand": "source.python"}] },
     { "keys": ["ctrl+.", "ctrl+g"],  "command": "lsp_symbol_definition", "context": [{ "key": "selector", "operator": "equal", "operand": "source.go" }] },
     { "keys": ["ctrl+g"],            "command": "lsp_symbol_definition", "context": [{ "key": "selector", "operator": "equal", "operand": "source.go" }] },
-    { "keys": ["ctrl+.", "ctrl+a"],  "command": "lsp_code_actions" },
-    { "keys": ["ctrl+.", "ctrl+r"],  "command": "lsp_symbol_rename" },
-    { "keys": ["ctrl+.", "ctrl+."],  "command": "show_overlay", "args": {"overlay": "command_palette", "text": "GoSublime: "} },
+    { "keys": ["ctrl+.", "ctrl+r"],  "command": "lsp_symbol_rename",     "context": [{ "key": "selector", "operator": "equal", "operand": "source.go" }] },
+    { "keys": ["ctrl+.", "ctrl+."],  "command": "show_overlay",          "context": [{ "key": "selector", "operator": "equal", "operand": "source.go" }], "args": {"overlay": "command_palette", "text": "GoSublime: "} },
 
     // { "keys": ["ctrl+g"], "command": "go_guru_goto_definition", "context": [{ "key": "selector", "operator": "equal", "operand": "source.go" }] },
     // { "keys": ["ctrl+.", "ctrl+g"], "command": "go_guru_goto_definition", "args": {"output": false}, "context": [{ "key": "selector", "operator": "equal", "operand": "source.go" }] },
@@ -92,4 +91,10 @@
     { "keys": ["ctrl+shift+8"],      "command": "previous_font" },
     { "keys": ["ctrl+shift+9"],      "command": "next_font" },
     { "keys": ["ctrl+0"],            "command": "reset_font_size" },
+
+    // Gosublime
+    { "keys": ["ctrl+.", "ctrl+x"],  "command": "margo_open_extension", },
+    { "keys": ["ctrl+.", "ctrl+e"],  "command": "margo_issues", },
+    { "keys": ["ctrl+.", "ctrl+a"],  "command": "gs_browse_declarations" },
+    { "keys": ["ctrl+.", "ctrl+p"],  "command": "gs_palette",         "args": {"palette": "imports", "direct": true}, "context": [{ "key": "selector", "operator": "equal", "operand": "source.go" }] },
 ]

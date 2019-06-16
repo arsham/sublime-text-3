@@ -50,6 +50,9 @@ func Margo(m mg.Args) {
 			"--enable=gocritic",
 			"--enable=unparam",
 			"--enable=interfacer",
+			"--enable=unconvert",
+			"--enable=nakedret",
+			"--enable=maligned",
 			"--skip-dirs=vendor",
 			"--tests=false",
 			// "--new-from-rev=HEAD~1",
@@ -58,7 +61,7 @@ func Margo(m mg.Args) {
 
 		golang.Snippets,
 		MySnippets,
-		&golang.Guru{},
+		// &golang.Guru{},
 		&DayTimeStatus{},
 		&golang.GoCmd{},
 
