@@ -25,3 +25,5 @@ GoSublime/src/*
 !Macros
 !SassBeautify.sublime-settings
 !LSP.sublime-settings
+!Origami.sublime-settings
+!Side Bar.sublime-settings
