@@ -11,11 +11,11 @@ import (
 func Margo(m mg.Args) {
 	m.Use(
 		&mg.MOTD{},
-		&golang.Gocode{
-			ShowFuncParams:  true,
-			ProposeTests:    false,
-			ProposeBuiltins: true,
-		},
+		// &golang.Gocode{
+		// 	ShowFuncParams:  true,
+		// 	ProposeTests:    false,
+		// 	ProposeBuiltins: true,
+		// },
 		&golang.MarGocodeCtl{
 			ImporterMode: golang.SrcImporterWithFallback,
 		},

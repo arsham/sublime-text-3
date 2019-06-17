@@ -2,7 +2,7 @@
     "goguru_debug": false,
     "goguru_jumpto_definition": false,
     "goguru_env": {
-        "GOPATH": "/home/arsham/Projects/Go",
-        "PATH": "/home/arsham/Projects/Go/bin:$PATH:/usr/lib/go/bin:/usr/bin",
+        // "GOPATH": "/home/arsham/go",
+        "PATH": "/home/arsham/go/bin:$PATH:/usr/lib/go/bin:/usr/bin",
     },
 }

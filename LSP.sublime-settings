@@ -7,7 +7,8 @@
 			"enabled": true,
 			"env":
 			{
-				"GOPATH": "/home/arsham/Projects/Go:/usr/lib/go"
+				"GOPATH": "/home/arsham/go:/usr/lib/go",
+				"PATH": "/home/arsham/go/bin:$PATH:/usr/lib/go/bin:/usr/bin",
 			},
 			"languageId": "go",
 			"scopes":
@@ -24,5 +25,6 @@
 	// "log_debug": true,
 	"log_stderr": true,
 	"show_references_in_quick_panel": true,
-	"show_view_status": false
+	"show_view_status": false,
+	"only_show_lsp_completions": true,
 }
