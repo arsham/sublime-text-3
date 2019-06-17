@@ -54,12 +54,13 @@
     { "keys": ["super+shift+."],     "command": "pane_pane_resize",   "args": { "dimension": "height", "resize": "increase" } },
 
     // Code navigation
-    // { "keys": ["ctrl+space"],        "command": "auto_complete" },
+    { "keys": ["ctrl+space"],        "command": "auto_complete" },
     { "keys": ["ctrl+.", "ctrl+g"],  "command": "anaconda_goto",         "context": [{ "key": "selector", "operator": "equal", "operand": "source.python"}] },
     { "keys": ["ctrl+.", "ctrl+g"],  "command": "lsp_symbol_definition", "context": [{ "key": "selector", "operator": "equal", "operand": "source.go" }] },
     { "keys": ["ctrl+g"],            "command": "lsp_symbol_definition", "context": [{ "key": "selector", "operator": "equal", "operand": "source.go" }] },
     { "keys": ["ctrl+.", "ctrl+r"],  "command": "lsp_symbol_rename",     "context": [{ "key": "selector", "operator": "equal", "operand": "source.go" }] },
     { "keys": ["ctrl+.", "ctrl+."],  "command": "show_overlay",          "context": [{ "key": "selector", "operator": "equal", "operand": "source.go" }], "args": {"overlay": "command_palette", "text": "GoSublime: "} },
+    { "keys": ["ctrl+.", "ctrl+f"],  "command": "lsp_code_actions",      "context": [{ "key": "selector", "operator": "equal", "operand": "source.go" }], },
 
     // { "keys": ["ctrl+g"], "command": "go_guru_goto_definition", "context": [{ "key": "selector", "operator": "equal", "operand": "source.go" }] },
     // { "keys": ["ctrl+.", "ctrl+g"], "command": "go_guru_goto_definition", "args": {"output": false}, "context": [{ "key": "selector", "operator": "equal", "operand": "source.go" }] },
