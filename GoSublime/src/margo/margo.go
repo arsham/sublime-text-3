@@ -32,14 +32,6 @@ func Margo(m mg.Args) {
 		// golang.GoTest("-race"),
 		golang.GoTest("-short"),
 
-		// run gometalinter on save
-		// &golang.Linter{Name: "gometalinter", Args: []string{
-		// 	"--fast",
-		// 	"--cyclo-over=15",
-		// 	"--disable=test",
-		// 	"--disable=gosec",
-		// 	"--disable=gocyclo",
-		// }},
 		&golang.Linter{Name: "golangci-lint", Label: "golangci", Args: []string{
 			"run",
 			"--fast",
@@ -50,6 +42,9 @@ func Margo(m mg.Args) {
 			"--enable=gocritic",
 			"--enable=unparam",
 			"--enable=interfacer",
+			"--enable=unconvert",
+			"--enable=nakedret",
+			"--enable=maligned",
 			"--skip-dirs=vendor",
 			"--tests=false",
 			// "--new-from-rev=HEAD~1",
@@ -58,7 +53,7 @@ func Margo(m mg.Args) {
 
 		golang.Snippets,
 		MySnippets,
-		&golang.Guru{},
+		// &golang.Guru{},
 		&DayTimeStatus{},
 		&golang.GoCmd{},
 

@@ -24,3 +24,6 @@ GoSublime/src/*
 !Material-Theme-Palenight.sublime-theme
 !Macros
 !SassBeautify.sublime-settings
+!LSP.sublime-settings
+!Origami.sublime-settings
+!Side Bar.sublime-settings
