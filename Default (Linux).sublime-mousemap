@@ -13,76 +13,11 @@
             }
         ]
     },
-    //Gotools:
-    // {
-    //     "button": "button2",
-    //     "modifiers": ["ctrl"],
-    //     "command": "gotools_goto_def",
-    //     "press_command": "drag_select",
-    //     "context": [
-    //         {
-    //             "key": "selector",
-    //             "operator": "not_equal",
-    //             "operand": "source.go",
-    //             "match_all": true,
-    //         }
-    //     ]
-    // },
-    // {
-    //     "button": "button2",
-    //     "modifiers": ["ctrl"],
-    //     "command": "go_guru",
-    //     "press_command": "drag_select",
-    //     "args": {
-    //         "mode": "definition",
-    //         "output": false
-    //     },
-    // },
-    //gosublime
-    // {
-    //     "button": "button2",
-    //     "modifiers": ["alt"],
-    //     "press_command": "drag_select",
-    //     "command": "gs_on_left_click",
-    //     "context": [
-    //         {
-    //             "key": "selector",
-    //             "operator": "equal",
-    //             "operand": "source.go"
-    //         }
-    //     ]
-    // },
-    // {
-    //     "button": "button2",
-    //     "modifiers": ["ctrl", "shift"],
-    //     "press_command": "drag_select",
-    //     "command": "gs_on_right_click",
-    //     "context": [
-    //         {
-    //             "key": "selector",
-    //             "operator": "equal",
-    //             "operand": "source.go"
-    //         }
-    //     ]
-    // },
-    // {
-    //     "button": "button2",
-    //     "modifiers": ["alt"],
-    //     "command": "gs_doc",
-    //     "args": {"mode": "goto"},
-    //     "context": [
-    //         {
-    //             "key": "selector",
-    //             "operator": "equal",
-    //             "operand": "source.go"
-    //         }
-    //     ]
-    // }
     {
         "button": "button2",
         "modifiers": ["ctrl"],
         "press_command": "drag_select",
-        "command": "gs9o_open",
-        "args": {"run": ["goto.definition"], "focus_view": false, "show_view": false},
+        "command": "lsp_symbol_definition",
+        "context": [{ "key": "selector", "operator": "equal", "operand": "source.go" }],
     },
 ]
