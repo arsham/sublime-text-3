@@ -1,0 +1,6 @@
+{
+    // puts results either in output panel or new window
+    "show_result_on_window": true,
+    // clears the output of previous query
+    "clear_output": true,
+}
