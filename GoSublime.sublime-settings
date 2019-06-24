@@ -2,6 +2,7 @@
     "env": {
         "GOPATH": "/home/arsham/Projects/Go:/usr/lib/go",
         "PATH": "/home/arsham/Projects/Go/bin:$PATH:/usr/lib/go/bin:/usr/bin",
+        "GO111MODULE": "on",
     },
     "gohtml_extensions": [".html.go", ".tmpl"],
 }

@@ -9,6 +9,7 @@
 			{
 				"GOPATH": "/home/arsham/Projects/Go:/usr/lib/go",
 				"PATH": "/home/arsham/Projects/Go/bin:$PATH:/usr/lib/go/bin:/usr/bin",
+				"GO111MODULE": "on",
 			},
 			"languageId": "go",
 			"scopes":
@@ -27,4 +28,5 @@
 	"show_references_in_quick_panel": true,
 	"show_view_status": false,
 	"only_show_lsp_completions": true,
+	"complete_all_chars": false,
 }
