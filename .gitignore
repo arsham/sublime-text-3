@@ -31,3 +31,4 @@ GoSublime/src/*
 !SQLTools.sublime-settings
 !Notes.sublime-settings
 !install.sh
+!update.sh
