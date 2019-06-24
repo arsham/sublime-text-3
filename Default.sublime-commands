@@ -5,4 +5,5 @@
     {"caption": "Generate Go tests", "command": "gotests"},
     {"caption": "View Package File", "command": "view_resource"},
     {"caption": "Code Actions", "command": "lsp_code_actions"},
+    {"caption": "Find Symbol References", "command": "lsp_symbol_references"},
 ]

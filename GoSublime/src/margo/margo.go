@@ -28,7 +28,7 @@ func Margo(m mg.Args) {
 
 		&golang.SyntaxCheck{},
 		golang.GoImports,
-		golang.GoInstallDiscardBinaries("-i"),
+		// golang.GoInstallDiscardBinaries("-i"),
 		// golang.GoTest("-race"),
 		golang.GoTest("-short"),
 
@@ -53,7 +53,6 @@ func Margo(m mg.Args) {
 
 		golang.Snippets,
 		MySnippets,
-		// &golang.Guru{},
 		&DayTimeStatus{},
 		&golang.GoCmd{},
 
@@ -129,7 +128,7 @@ var MySnippets = golang.SnippetFuncs(
 			{
 				Query: "test cases",
 				Title: "Test Cases",
-				Src:   "tcs := []struct {\n\tname string\n\t$1\n}{}\nfor _, tc := range tcs {\n\tt.Run(tc.name, func(t *testing.T) {\n\t})\n}",
+				Src:   "tcs := map[string]struct {\n\t$1\n}{}\nfor name, tc := range tcs {\n\tt.Run(name, func(t *testing.T) {\n\t})\n}",
 			},
 			{
 				Query: "patch method",
