@@ -4,24 +4,51 @@
 	{
 		"gopls":
 		{
+			"languageId": "go",
 			"enabled": true,
+			"scopes":
+			[
+				"source.go",
+			],
+			"syntaxes":
+			[
+				"Packages/Go/Go.sublime-syntax",
+				"Packages/SublPlugs/Go.sublime-syntax",
+			],
 			"env":
 			{
 				"GOPATH": "/home/arsham/Projects/Go:/usr/lib/go",
 				"PATH": "/home/arsham/Projects/Go/bin:$PATH:/usr/lib/go/bin:/usr/bin",
 				"GO111MODULE": "on",
 			},
-			"languageId": "go",
+		},
+	    "pyls":
+	    {
+			"languageId": "python",
+			"enabled": true,
 			"scopes":
 			[
-				"source.go"
+				"source.python",
 			],
 			"syntaxes":
 			[
-				"Packages/Go/Go.sublime-syntax",
-				"Packages/SublPlugs/Go.sublime-syntax"
-			]
-		}
+				"Packages/Python/Python.sublime-syntax",
+				"Packages/MagicPython/grammars/MagicPython.tmLanguage",
+				"Packages/Djaneiro/Syntaxes/Python Django.tmLanguage",
+			],
+			"settings": {
+				"pyls": {
+					"configurationSources": [
+						"pycodestyle",
+					],
+					"plugins": {
+						"pycodestyle": {
+							"ignore": "E501",
+						},
+					},
+				},
+			},
+	    },
 	},
 	// "log_debug": true,
 	"log_stderr": true,

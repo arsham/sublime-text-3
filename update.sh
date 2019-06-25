@@ -11,3 +11,5 @@ done
 
 cd ../GoSublime
 git pull origin development
+sudo pacman -S python-pip
+sudo pip install -U "python-language-server[all]"

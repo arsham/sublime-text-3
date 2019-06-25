@@ -5,3 +5,5 @@ git clone https://git.kuroku.io/GoSublime -b development
 git clone git@github.com:arsham/HaoGist
 git clone git@github.com:arsham/SublPlugs
 git clone git@github.com:arsham/GoRename
+sudo pacman -S python-pip
+sudo pip install -U "python-language-server[all]"
