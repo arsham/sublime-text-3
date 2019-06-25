@@ -21,6 +21,11 @@
 				"PATH": "/home/arsham/Projects/Go/bin:$PATH:/usr/lib/go/bin:/usr/bin",
 				"GO111MODULE": "on",
 			},
+			"settings": {
+				"gopls": {
+					"organizeImports": false,
+				},
+			},
 		},
 	    "pyls":
 	    {
@@ -56,4 +61,5 @@
 	"show_view_status": false,
 	"only_show_lsp_completions": true,
 	"complete_all_chars": false,
+	"completion_hint_type": false,
 }
