@@ -118,27 +118,65 @@ var MySnippets = golang.SnippetFuncs(
 			{
 				Query: "test error",
 				Title: "t.Error() condition",
-				Src:   "if $1 {\n\tt.Error(\"$2: $3 = ($4); want ($5)\")\n}",
+				Src: `
+	if $1 {
+		t.Error("$2: $3 = ($4); want ($5)")
+	}`,
 			},
 			{
 				Query: "test errorf",
 				Title: "t.Errorf() condition",
-				Src:   "if $1 {\n\tt.Errorf(\"$2: $3 = ($4); want ($5)\", $6)\n}",
+				Src: `
+	if $1 {
+		t.Errorf("$2: $3 = ($4); want ($5)", $6)
+	}`,
 			},
 			{
 				Query: "test cases",
 				Title: "Test Cases",
-				Src:   "tcs := map[string]struct {\n\t$1\n}{}\nfor name, tc := range tcs {\n\tt.Run(name, func(t *testing.T) {\n\t})\n}",
+				Src: `
+	tcs := map[string]struct {
+		$1
+	}{}
+	for name, tc := range tcs {
+		t.Run(name, func(t *testing.T) {
+			$2
+		})
+	}`,
 			},
 			{
 				Query: "patch method",
 				Title: "Monkey path a method",
-				Src:   "monkey.PatchInstanceMethod(reflect.TypeOf(${1:instance}), \"${2:method name}\", func(${3:receiver}, ${4:args}) ${5:return values} {\n\t\n})\ndefer monkey.UnpatchInstanceMethod(reflect.TypeOf(${1:instance}), \"${2:method name}\")",
+				Src: `
+	monkey.PatchInstanceMethod(reflect.TypeOf(${1:instance}), "${2:method name}", func(${3:receiver}, ${4:args}) ${5:return values} {
+	})
+	defer monkey.UnpatchInstanceMethod(reflect.TypeOf(${1:instance}), "${2:method name}")
+	`,
 			},
 			{
 				Query: "patch func",
 				Title: "Monkey path a function",
-				Src:   "monkey.Patch(${1:time.Now}, ${2:func() time.Time} {\n})\ndefer monkey.Unpatch(${1:time.Now})",
+				Src: `
+	monkey.Patch(${1:time.Now}, ${2:func() time.Time} {
+	})
+	defer monkey.Unpatch(${1:time.Now})
+	`,
+			},
+			{
+				Query: "db mock",
+				Title: "Get db mock",
+				Src: `
+	db, mock, err := sqlmock.New()
+	if err != nil {
+		t.Fatalf("got %v, want nil", err)
+	}
+	defer db.Close()
+	defer func() {
+		if err := mock.ExpectationsWereMet(); err != nil {
+			t.Errorf("there were unfulfilled expectations: %s", err)
+		}
+	}()
+	$1`,
 			},
 		}
 	},
