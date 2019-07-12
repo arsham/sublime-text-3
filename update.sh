@@ -1,14 +1,13 @@
 #!/bin/sh
 update() {
     cd ../$1
-    git pull origin master
+    git pull origin
     cd ../User
 }
 
-for dir in LSP HaoGist SublPlugs GoRename; do
+for dir in LSP HaoGist SublPlugs GoRename GoSublime; do
+    echo "Updating $dir"
     update $dir
 done
 
-cd ../GoSublime
-git pull origin development
 sudo pip install -U "python-language-server[all]"
