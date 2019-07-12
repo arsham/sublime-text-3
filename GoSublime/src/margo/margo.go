@@ -12,9 +12,9 @@ func Margo(m mg.Args) {
 	m.Use(
 		&mg.MOTD{},
 		&golang.Gocode{
-			ShowFuncParams:  true,
-			ProposeTests:    false,
-			ProposeBuiltins: true,
+			ShowFuncParams:      true,
+			ShowFuncResultNames: true,
+			ProposeBuiltins:     true,
 		},
 		&golang.MarGocodeCtl{
 			ImporterMode: golang.SrcImporterWithFallback,
@@ -55,6 +55,7 @@ func Margo(m mg.Args) {
 		MySnippets,
 		&DayTimeStatus{},
 		&golang.GoCmd{},
+		&golang.Guru{},
 
 		// Add user commands for running tests and benchmarks
 		&golang.TestCmds{
