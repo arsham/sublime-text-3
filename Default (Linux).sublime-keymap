@@ -42,8 +42,9 @@
     { "keys": ["super+shift+down"],  "command": "carry_file_to_pane", "args": {"direction": "down"} },
     { "keys": ["super+shift+left"],  "command": "carry_file_to_pane", "args": {"direction": "left"} },
 
-    { "keys": ["super+z"],           "command": "zoom_pane",          "args": {"fraction": 0.9} },
-    { "keys": ["super+shift+z"],     "command": "unzoom_pane", },
+    // { "keys": ["super+z"],           "command": "zoom_pane",          "args": {"fraction": 0.9} },
+    // { "keys": ["super+shift+z"],     "command": "unzoom_pane", },
+    { "keys": ["super+z"],           "command": "max_pane" },
     { "keys": ["super+c"],           "command": "resize_pane",        "args": {"orientation": "cols"} },
     { "keys": ["super+r"],           "command": "resize_pane",        "args": {"orientation": "rows"} },
 
