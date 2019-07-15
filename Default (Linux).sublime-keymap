@@ -101,4 +101,8 @@
     { "keys": ["ctrl+.", "ctrl+e"],  "command": "margo_issues", },
     { "keys": ["ctrl+.", "ctrl+a"],  "command": "gs_browse_declarations" },
     { "keys": ["ctrl+.", "ctrl+p"],  "command": "gs_palette",         "args": {"palette": "imports", "direct": true}, "context": [{ "key": "selector", "operator": "equal", "operand": "source.go" }] },
+
+    // Misc
+    { "keys": ["ctrl+shift+enter"],  "command": "run_macro_file", "args": {"file": "res://Packages/Default/Add Line Before.sublime-macro"} },
+    { "keys": ["ctrl+shift+;"],      "command": "mate_commands" },
 ]

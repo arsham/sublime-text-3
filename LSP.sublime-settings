@@ -13,7 +13,7 @@
 			"syntaxes":
 			[
 				"Packages/Go/Go.sublime-syntax",
-				"Packages/SublPlugs/Go.sublime-syntax",
+				"Packages/sublime-mate/Go.sublime-syntax",
 			],
 			"env":
 			{
@@ -55,11 +55,11 @@
 			},
 	    },
 	},
-	// "log_debug": true,
+	// "log_debug": false,
 	"log_stderr": true,
 	"show_references_in_quick_panel": true,
 	"show_view_status": false,
 	"only_show_lsp_completions": true,
 	"complete_all_chars": false,
-	"completion_hint_type": "none",
+	"completion_hint_type": "auto",
 }
