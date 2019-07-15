@@ -103,6 +103,7 @@
     { "keys": ["ctrl+.", "ctrl+p"],  "command": "gs_palette",         "args": {"palette": "imports", "direct": true}, "context": [{ "key": "selector", "operator": "equal", "operand": "source.go" }] },
 
     // Misc
+    // { "keys": ["ctrl+alt+p"],      "command": "prompt_select_workspace" },
     { "keys": ["ctrl+shift+enter"],  "command": "run_macro_file", "args": {"file": "res://Packages/Default/Add Line Before.sublime-macro"} },
     { "keys": ["ctrl+shift+;"],      "command": "mate_commands" },
 ]

@@ -5,7 +5,7 @@ update() {
     cd ../User
 }
 
-for dir in LSP HaoGist SublPlugs GoRename GoSublime; do
+for dir in LSP HaoGist sublime-mate GoRename GoSublime; do
     echo "Updating $dir"
     update $dir
 done

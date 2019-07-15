@@ -36,6 +36,7 @@
 		"protobuf",
 		"stylesheet"
 	],
+	"animation_enabled": false,
 	"auto_complete_selector": "source, text",
 	"binary_file_patterns":
 	[
