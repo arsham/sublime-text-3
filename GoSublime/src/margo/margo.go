@@ -168,9 +168,7 @@ var MySnippets = golang.SnippetFuncs(
 				Title: "Get db mock",
 				Src: `
 	db, mock, err := sqlmock.New()
-	if err != nil {
-		t.Fatalf("got %v, want nil", err)
-	}
+	require.NoError(t, err)
 	defer db.Close()
 	defer func() {
 		if err := mock.ExpectationsWereMet(); err != nil {
@@ -182,11 +180,33 @@ var MySnippets = golang.SnippetFuncs(
 		}
 	},
 	func(cx *golang.CompletionCtx) []mg.Completion {
-		// if we're not in a block (i.e. function), do nothing
+		if !cx.IsTestFile {
+			return nil
+		}
+		return []mg.Completion{
+			{
+				Query: "random generator",
+				Title: "random generator",
+				Src: `
+var runes = []rune("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ")
+
+func randomString(count int) string {
+	rand.Seed(time.Now().UnixNano())
+	b := make([]rune, count)
+	for i := range b {
+		b[i] = runes[rand.Intn(len(runes))]
+	}
+	return string(b)
+}
+`,
+			},
+		}
+	},
+
+	func(cx *golang.CompletionCtx) []mg.Completion {
 		if !cx.Scope.Is(golang.BlockScope) {
 			return nil
 		}
-
 		return []mg.Completion{
 			{
 				Query: "ppp",
@@ -194,7 +214,6 @@ var MySnippets = golang.SnippetFuncs(
 				Src:   "pp.Println($0)",
 			},
 		}
-		//
 	},
 )
 

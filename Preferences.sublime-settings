@@ -34,7 +34,9 @@
 		"href",
 		"js",
 		"protobuf",
-		"stylesheet"
+		"stylesheet",
+		"journaling",
+		"Journalable"
 	],
 	"animation_enabled": false,
 	"auto_complete_selector": "source, text",
@@ -176,6 +178,7 @@
 		"antonholmquist",
 		"arsham",
 		"backoff",
+		"bigcache",
 		"cdproto",
 		"chromedp",
 		"cmdline",
@@ -186,6 +189,7 @@
 		"crypto",
 		"ctx",
 		"datatype",
+		"db",
 		"dcsext",
 		"div",
 		"elasticsearch's",
@@ -203,6 +207,7 @@
 		"goquery",
 		"goroutine",
 		"gpu",
+		"grandcat",
 		"h1",
 		"h2",
 		"hreflang",
@@ -221,6 +226,7 @@
 		"mem",
 		"memprof",
 		"mousemap",
+		"moz",
 		"mutex",
 		"namsral",
 		"nvidia",
@@ -229,6 +235,7 @@
 		"pprof",
 		"prev",
 		"protolib",
+		"ptypes",
 		"req",
 		"resp",
 		"routepath",
@@ -239,11 +246,14 @@
 		"strconv",
 		"syscall",
 		"tcp",
+		"thirdpartyapi",
 		"timeout",
 		"txt",
 		"uuid",
 		"var",
-		"www"
+		"vervesearch",
+		"www",
+		"zeroconf"
 	],
 	"indent_guide_options":
 	[

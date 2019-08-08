@@ -65,6 +65,9 @@
     { "keys": ["ctrl+g"],            "command": "lsp_symbol_definition" },
     { "keys": ["ctrl+.", "ctrl+r"],  "command": "lsp_symbol_rename" },
     { "keys": ["ctrl+.", "ctrl+f"],  "command": "lsp_code_actions" },
+    // GoSublime implementation
+    // { "keys": ["ctrl+.", "ctrl+g"],  "command": "gs9o_open", "args": {"run": ["goto.definition"], "focus_view": false, "show_view": false}, "context": [{ "key": "selector", "operator": "equal", "operand": "source.go" }] },
+    // { "keys": ["ctrl+g"],            "command": "gs9o_open", "args": {"run": ["goto.definition"], "focus_view": false, "show_view": false}, "context": [{ "key": "selector", "operator": "equal", "operand": "source.go" }] },
 
     // { "keys": ["ctrl+g"], "command": "go_guru_goto_definition", "context": [{ "key": "selector", "operator": "equal", "operand": "source.go" }] },
     // { "keys": ["ctrl+.", "ctrl+g"], "command": "go_guru_goto_definition", "args": {"output": false}, "context": [{ "key": "selector", "operator": "equal", "operand": "source.go" }] },
