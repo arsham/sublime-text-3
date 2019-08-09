@@ -215,6 +215,25 @@ func randomString(count int) string {
 			},
 		}
 	},
+	func(cx *golang.CompletionCtx) []mg.Completion {
+		return []mg.Completion{
+			{
+				Query: "fuzz function",
+				Title: "Fuzz Function",
+				Src: `
+func Fuzz${1:funcName}(p []byte) int {
+    if !${2:notInteresting} {
+        return -1
+    }
+    if _, err := ${1:funcName}(p); err != nil {
+        return 0
+    }
+    return 1
+}
+`,
+			},
+		}
+	},
 )
 
 var qtSnippets = golang.SnippetFuncs(
