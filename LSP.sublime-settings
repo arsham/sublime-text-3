@@ -59,7 +59,5 @@
 	"log_stderr": true,
 	"show_references_in_quick_panel": true,
 	"show_view_status": false,
-	"only_show_lsp_completions": true,
-	"complete_all_chars": false,
-	"completion_hint_type": "auto",
+	"disabled_capabilities": ["completion"],
 }

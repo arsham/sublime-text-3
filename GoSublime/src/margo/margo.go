@@ -221,7 +221,7 @@ func randomString(count int) string {
 				Query: "fuzz function",
 				Title: "Fuzz Function",
 				Src: `
-func Fuzz${1:funcName}(p []byte) int {
+func Fuzz${1:funcName}(data []byte) int {
     if !${2:notInteresting} {
         return -1
     }
